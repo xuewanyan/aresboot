@@ -1,8 +1,11 @@
 package com.cn.action;
 
+import com.cn.service.IMessageService;
 import org.slf4j.ILoggerFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,9 +20,12 @@ public class MessageAction { // 控制层实现类
      */
     private static final Logger logger = LoggerFactory.getLogger(MessageAction.class);
 
+    @Autowired
+    private IMessageService messageService;
+
     @PostMapping("/echo")
     public String echo(@RequestBody String msg){
-        this.logger.info("*************************{}",msg);
-        return "xx";
+        this.logger.info("22*************************{}",msg);
+        return this.messageService.echo(msg);
     }
 }

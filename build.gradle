@@ -48,6 +48,8 @@ subprojects { // 子模块
         maven {url ALIYUN_JCENTER_URL} allowInsecureProtocol true // 设置阿里云仓库
     }
     dependencies { // 公共依赖库管理
+        implementation 'org.springframework.boot:spring-boot-devtools'
+
     }
     sourceSets{ // 源代码目录
         main{
