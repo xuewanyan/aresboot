@@ -1,0 +1,108 @@
+buildscript {
+    apply from:'dependencies.gradle' // 引入配置文件
+    repositories {
+        maven {
+            url 'https://repo.spring.io/libs-milestone'
+        }
+        mavenCentral() // 默认情况下所提供仅仅是一个maven中央仓库
+    }
+    dependencies {
+        classpath libraries.'spring-boot-gradle-plugin'
+    }
+}
+
+
+group project_group
+version project_version
+
+apply from:'dependencies.gradle' // 引入配置文件
+
+def env = System.getProperty("evn") ?: 'dev'
+
+subprojects { // 子模块
+    apply plugin : 'java'
+    apply plugin : 'org.springframework.boot'
+    apply plugin : 'io.spring.dependency-management'
+    sourceCompatibility = project_jdk // 基于JDK1.8版本
+    targetCompatibility = project_jdk// 基于JDK1.8版本
+    repositories {
+        // 引入阿里云
+        def ALIYUN_URL = 'http://maven.aliyun.com/nexus/content/groups/public'
+        def ALIYUN_JCENTER_URL = 'http://maven.aliyun.com/nexus/content/repositories/jcenter'
+        all {
+            ArtifactRepository repo ->
+                if(repo instanceof MavenArtifactRepository){
+                    def url = repo.url.toString()
+                    if(url.startsWith("https://repo1.maven.org/maven2")){
+                        project.logger.lifecycle "Repository ${repo.url} replaced by $ALIYUN_URL."
+                        return repo
+                    }
+                    if(url.startsWith("https://jcenter.bintary.com/")){
+                        project.logger.lifecycle "Repository ${repo.url} replaced by $ALIYUN_JCENTER_URL."
+                        return repo
+                    }
+                }
+        }
+
+        maven {url ALIYUN_URL} allowInsecureProtocol true // 设置阿里云仓库
+        maven {url ALIYUN_JCENTER_URL} allowInsecureProtocol true // 设置阿里云仓库
+    }
+    dependencies { // 公共依赖库管理
+    }
+    sourceSets{ // 源代码目录
+        main{
+            java { srcDirs = ['src/main/java'] }
+            resources { srcDirs = ['src/main/resources',"src/main/profiles/$env"] }
+        }
+        test{
+            java {srcDirs = ['src.main.java']}
+            resources {srcDirs = ['src/main/resources']}
+        }
+    }
+    test{
+        useJUnitPlatform()
+    }
+    task sourceJar(type:Jar, dependsOn : classes){
+        archiveClassifier = 'sources'
+        from sourceSets.main.allSource
+    }
+    task javadocTask(type:Javadoc){
+        options.encoding = "UTF-8"
+        source = sourceSets.main.allSource
+    }
+    task javadocJar(type: Jar, dependsOn: javadocTask){
+        archiveClassifier = 'javadoc'
+        from javadocTask.destinationDir
+    }
+    tasks.withType(Javadoc){
+        options.encoding = "UTF-8"
+    }
+    tasks.withType(JavaCompile){
+        options.encoding = "UTF-8"
+    }
+    artifacts {
+        archives sourceJar
+        archives javadocJar
+    }
+    gradle.taskGraph.whenReady {
+        tasks.each{
+            task->
+                if(task.name.contains('test')){
+                    task.enabled = true
+                }
+        }
+    }
+    [compileJava,compileTestJava,javadoc]*.options*.encoding = 'UTF-8' // 编码配置
+}
+
+project('aresboot-web'){ // 子模块
+    dependencies {
+        implementation  project(':aresboot-common') // 引入其他子模块
+        implementation  'org.springframework.boot:spring-boot-starter-web'
+    }
+}
+project('aresboot-common'){ // 子模块
+    dependencies {}
+}
+
+

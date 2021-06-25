@@ -1,0 +1,5 @@
+rootProject.name = 'aresboot'
+include 'untitled'
+include 'aresboot-common'
+include 'aresboot-web'
+

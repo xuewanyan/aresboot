@@ -1,0 +1,6 @@
+ext.vertions = [ // 定义所有要使用的版本号
+    springBoot : '2.5.1'
+]
+ext.libraries=[
+        'spring-boot-gradle-plugin' : "org.springframework.boot:spring-boot-gradle-plugin:${vertions.springBoot}"
+]
