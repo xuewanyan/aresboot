@@ -1,0 +1,18 @@
+-d 'D:\\gitRepos\\aresboot\\aresboot-web\\build\\docs\\javadoc'
+-doctitle 'aresboot-web 1.0.0 API'
+-encoding 'UTF-8'
+-notimestamp 
+-quiet 
+-windowtitle 'aresboot-web 1.0.0 API'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\resources\\banner.txt'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\resources\\META-INF\\spring\\spring-service.xml'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\action\\MessageAction.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\banner\\MyBanner.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\lombok\\MessageHandle.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\lombok\\MessageRead.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\service\\IMessageService.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\service\\impl\\MessageServiceImpl.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\StartSpringBootApplication.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\vo\\Dept.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\vo\\Empl.java'
+'D:\\gitRepos\\aresboot\\aresboot-web\\src\\main\\java\\com\\cn\\vo\\Message.java'
