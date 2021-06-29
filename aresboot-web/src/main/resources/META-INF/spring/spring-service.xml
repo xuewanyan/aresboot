@@ -7,4 +7,4 @@
 
         <bean id="messageService" class="com.cn.service.impl.MessageServiceImpl"/>
 
-</beans>        
+</beans>

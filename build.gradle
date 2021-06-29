@@ -49,7 +49,18 @@ subprojects { // 子模块
     }
     dependencies { // 公共依赖库管理
         implementation 'org.springframework.boot:spring-boot-devtools'
+        testImplementation('org.springframework.boot:spring-boot-starter-test'){
+            exclude group : 'junit' , module : 'junit'
+        }
+        testImplementation(enforcedPlatform(libraries.'junit-bom'))
+        testImplementation libraries.'junit-jupiter-api'
+        testImplementation libraries.'junit-jupiter-engine'
+        testImplementation libraries.'junit-vintage-engine'
+        testImplementation libraries.'junit-platform-launcher'
 
+        // 以下为Lombok插件的相关依赖配置
+        compileOnly(libraries.'lombok') // 在编译的时候生效
+        annotationProcessor(libraries.'lombok') // 在注解的时候让其生效
     }
     sourceSets{ // 源代码目录
         main{
@@ -57,8 +68,8 @@ subprojects { // 子模块
             resources { srcDirs = ['src/main/resources',"src/main/profiles/$env"] }
         }
         test{
-            java {srcDirs = ['src.main.java']}
-            resources {srcDirs = ['src/main/resources']}
+            java {srcDirs = ['src/test/java']}
+            resources {srcDirs = ['src/test/resources']}
         }
     }
     test{

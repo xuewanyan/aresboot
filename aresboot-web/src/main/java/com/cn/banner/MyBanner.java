@@ -2,7 +2,6 @@ package com.cn.banner;
 
 import org.springframework.boot.Banner;
 import org.springframework.core.env.Environment;
-
 import java.io.PrintStream;
 
 public class MyBanner implements Banner {
