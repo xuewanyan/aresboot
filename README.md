@@ -13,9 +13,16 @@
     
 #P15  2021-06-28 生成类操作结构
 
-#P16  2021-06-29 Accessor
-    1、fluent模式:可以将属性的名称作为属性设置和返回。不包含setter,getter方法
-    2、chain模式：可以将属性的名称作为属性设置和返回。包含setter,getter方法
-    
-#P17  2021-06-29 理解建造者模式
-    
+==============================2021-06-29============git分支 bt-20210629
+#P16 #Accessor(lombok)
+    @Accessor(fluent = true)模式:可以将属性的名称作为属性设置和返回。不包含setter,getter方法
+    @Accessor(chain = true) 模式：可以将属性的名称作为属性设置和返回。包含setter,getter方法
+#P17 理解建造者模式(lombok)   
+    @Builder // 建造者模式
+    使用：Message message = Message.builder().title("建").content("造").pubdate(new Date()).build();
+#P18 异常处理(lombok) 
+    @SneakyThrows:会自动生成try...catch
+#P19 IO流自动关闭(lombok) 
+    @Cleanup:自动关闭流
+#P20 同步方法(lombok) 
+    @Synchronized
