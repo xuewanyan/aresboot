@@ -10,9 +10,9 @@ public class MessageTest {
 
     @Test
     public void test(){
-        Message message = Message.builder().title("建").content("造").pubdate(new Date()).build();
-
-        System.out.println(message);
+//        Message message = Message.builder().title("建").content("造").pubdate(new Date()).build();
+//
+//        System.out.println(message);
     }
     @Test
     public void testMessageRead(){

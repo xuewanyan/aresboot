@@ -3,7 +3,7 @@ buildscript {
     repositories {
         maven {
             url 'https://repo.spring.io/libs-milestone'
-        }
+        } allowInsecureProtocol true
         mavenCentral() // 默认情况下所提供仅仅是一个maven中央仓库
     }
     dependencies {
@@ -111,11 +111,16 @@ subprojects { // 子模块
 project('aresboot-web'){ // 子模块
     dependencies {
         implementation  project(':aresboot-common') // 引入其他子模块
-        implementation  'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation libraries.'jackson-dataformat-xml'
+        implementation libraries.'jackson-databind'
+        implementation libraries.'jackson-annotations'
     }
 }
 project('aresboot-common'){ // 子模块
-    dependencies {}
+    dependencies { //配置子模块依赖
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+    }
 }
 
 
