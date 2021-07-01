@@ -1,15 +1,20 @@
 ext.vertions = [ // 定义所有要使用的版本号
-    springBoot                               : '2.5.1',
-    junit                                    : '5.7.2',
-    junitplatformlauncher                    : '1.7.2',
-    lombok                                   : '1.18.20'
+    springBoot                        : '2.5.1',
+    junit                             : '5.7.2',
+    junitplatformlauncher             : '1.7.2',
+    lombok                            : '1.18.20',
+    fastjson                          : '1.2.75',
+    jackson                           : '2.12.3'
 ]
 ext.libraries=[
-        'spring-boot-gradle-plugin'          : "org.springframework.boot:spring-boot-gradle-plugin:${vertions.springBoot}",
-        'junit-jupiter-api'                  : "org.junit.jupiter:junit-jupiter-api:${vertions.junit}",
-        'junit-jupiter-engine'               : "org.junit.jupiter:junit-jupiter-engine:${vertions.junit}",
-        'junit-vintage-engine'               : "org.junit.vintage:junit-vintage-engine:${vertions.junit}",
-        'junit-platform-launcher'            :"org.junit.platform:junit-platform-launcher:${vertions.junitplatformlauncher}",
-        'junit-bom'                          :"org.junit:junit-bom:${vertions.junit}",
-        'lombok'                             :"org.projectlombok:lombok:${vertions.lombok}"
+        'spring-boot-gradle-plugin'   : "org.springframework.boot:spring-boot-gradle-plugin:${vertions.springBoot}",
+        'junit-jupiter-api'           : "org.junit.jupiter:junit-jupiter-api:${vertions.junit}",
+        'junit-jupiter-engine'        : "org.junit.jupiter:junit-jupiter-engine:${vertions.junit}",
+        'junit-vintage-engine'        : "org.junit.vintage:junit-vintage-engine:${vertions.junit}",
+        'junit-platform-launcher'     :"org.junit.platform:junit-platform-launcher:${vertions.junitplatformlauncher}",
+        'junit-bom'                   :"org.junit:junit-bom:${vertions.junit}",
+        'lombok'                      :"org.projectlombok:lombok:${vertions.lombok}",
+        'jackson-dataformat-xml'      :"com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${vertions.jackson}",
+        'jackson-databind'            :"com.fasterxml.jackson.core:jackson-databind:${vertions.jackson}",
+        'jackson-annotations'         :"com.fasterxml.jackson.core:jackson-annotations:${vertions.jackson}"
 ]

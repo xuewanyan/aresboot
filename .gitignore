@@ -1,0 +1,7 @@
+*.class
+*.idea/
+.gradle/
+.idea/
+build/
+aresboot-web/build/
+build/
