@@ -28,7 +28,7 @@ public class MessageAction extends BaseAction{ // 控制层实现类
     @Resource(name = "messageService")
     private IMessageService messageService;
 
-    @PostMapping(value = "/echo")
+    @PostMapping(value = "/echo",produces = MediaType.IMAGE_PNG_VALUE)
     public Object echo(@RequestBody Message message){
         message.setTitle("[ECHO]"+message.getTitle());
         message.setContent("[ECHO]"+message.getContent());

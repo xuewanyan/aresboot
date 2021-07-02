@@ -34,4 +34,17 @@
 #P22 整合Fastjson组件
 
 #P23 返回XML数据
+     @PostMapping(value = "/echo",produces = MediaType.APPLICATION_XML_VALUE)
+     
+==============================2021-07-01============git分支 bt-20210701
+#P24 返回PDF数据
+    到现在目前为止所有的返回的数据实际上最为常见的类型就是Restful(JSON结构)类型。
+#P25 返回excel数据
+#P26 返回图像流
+#P27 返回视频流
+#P28 文件下载
+#P29 属性定义与注入(.yml文件)
+#P30 @ConfigurationProperties("muyan")(yml文件)
+    yml文件，key值相同实现自动注入
+#P31 注入对象数据(yml文件) 
     
