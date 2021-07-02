@@ -1,0 +1,15 @@
+source:
+  mysql: mysql:xxxxxx
+  message: "xxx"
+  infos: "{'t1':'x1','t2':'x2'}"
+
+muyan:
+  mysql: mysql:xxxxxx
+  message:
+    - 测试1,
+    - 侧身2,
+    - 册
+  books:
+    javaBeans: 《springboot》
+    javaApplication: 《springcloud》
+    javaWeb: 《spring》

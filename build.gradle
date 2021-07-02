@@ -52,11 +52,11 @@ subprojects { // 子模块
         testImplementation('org.springframework.boot:spring-boot-starter-test'){
             exclude group : 'junit' , module : 'junit'
         }
-        testImplementation(enforcedPlatform(libraries.'junit-bom'))
-        testImplementation libraries.'junit-jupiter-api'
-        testImplementation libraries.'junit-jupiter-engine'
-        testImplementation libraries.'junit-vintage-engine'
-        testImplementation libraries.'junit-platform-launcher'
+        implementation (enforcedPlatform(libraries.'junit-bom'))
+        implementation libraries.'junit-jupiter-api'
+        implementation libraries.'junit-jupiter-engine'
+        implementation libraries.'junit-vintage-engine'
+        implementation libraries.'junit-platform-launcher'
 
         // 以下为Lombok插件的相关依赖配置
         compileOnly(libraries.'lombok') // 在编译的时候生效

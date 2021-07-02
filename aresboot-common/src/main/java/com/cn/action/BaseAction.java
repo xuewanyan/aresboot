@@ -10,10 +10,9 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 /**
- * 定义一个公共的Action类
+ * xueyan
  */
 public abstract class BaseAction {
-    // 在我们现在的开发之中如果要将字符串转为日期时间，考虑到多线程环境下的并发问题，所以一定要使用LocalDate
     private static final DateTimeFormatter LOCAL_DATE_FORMATE = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     @InitBinder
