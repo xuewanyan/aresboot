@@ -8,6 +8,12 @@ version '1.0.0'
 repositories {
     mavenCentral()
 }
+bootJar{ // 是由Springboot提供的任务名称
+    // 如果开发者有需要也可以自定义一些打包后的配置项，如 后缀，版本号，执行类
+    archiveClassifier = 'lee'
+    archivesBaseName = 'ares-boot'
+    archiveVersion = project_version
+}
 
 dependencies {
     testImplementation group: 'junit', name: 'junit', version: '4.12'
