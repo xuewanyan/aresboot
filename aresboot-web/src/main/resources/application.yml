@@ -13,3 +13,7 @@ muyan:
     javaBeans: 《springboot》
     javaApplication: 《springcloud》
     javaWeb: 《spring》
+
+spring:
+  profiles:
+    active: dev # 默认生效的profile文件
