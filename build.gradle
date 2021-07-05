@@ -110,17 +110,24 @@ subprojects { // 子模块
 
 project('aresboot-web'){ // 子模块
     dependencies {
-        implementation  project(':aresboot-common') // 引入其他子模块
-        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation project(':aresboot-common') // 引入其他子模块
         implementation libraries.'jackson-dataformat-xml'
         implementation libraries.'jackson-databind'
         implementation libraries.'jackson-annotations'
+       // implementation 'org.springframework.boot:spring-boot-starter-jetty'
+        implementation 'org.springframework.boot:spring-boot-starter-undertow'
+        implementation ('org.springframework.boot:spring-boot-starter-web') {
+            exclude group : 'org.springframework.boot' , module : 'spring-boot-starter-tomcat'
+        }
     }
 }
 project('aresboot-common'){ // 子模块
     dependencies { //配置子模块依赖
-        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation ('org.springframework.boot:spring-boot-starter-web') {
+            exclude group : 'org.springframework.boot' , module : 'spring-boot-starter-tomcat'
+        }
+      //  implementation 'org.springframework.boot:spring-boot-starter-jetty'
+        implementation 'org.springframework.boot:spring-boot-starter-undertow'
     }
 }
-
 
