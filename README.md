@@ -80,3 +80,20 @@
      Undertow是由红帽公司开发的一款基于NIO的高性能处理的WEB嵌入式服务器，在使用时不需要提供容器，只需要提供其
      内部的构建API即可快速搭建WEB服务，同时Undertow的生命周期完全由嵌入的应用程序进行控制，在Springboot依赖库
      中可以直接通过依赖管理实现整合Undertow容器。
+
+==============================2021-07-06============git分支 bt-20210706
+#P40 获取WEB内置对象
+    HttpServletRequest,HttpServletResponse
+#P41 读取资源文件
+    国际化程序应用。
+#P42 文件上传
+#P43 整合WEB过滤器
+    需要清楚的是，在整个的SpringBoot项目开发过程之中，过滤器是属于javaWeb的原生的开发组件，那么既然是原生的处理组件，
+    是否使用还是需要根据大家的实际要求来进行处理。
+    MessageFilter extends HttpFilter 
+#P44 整合WEB监听器
+    WebServletListener implements ServletContextListener
+#P45 拦截器
+    DefaultHandlerInterceptor implements HandlerInterceptor
+#P46 AOP拦截器
+    

@@ -4,10 +4,6 @@ import com.cn.service.IMessageService;
 import com.cn.vo.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.FileSystemXmlApplicationContext;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,10 +24,11 @@ public class MessageAction extends BaseAction{ // 控制层实现类
     @Resource(name = "messageService")
     private IMessageService messageService;
 
-    @PostMapping(value = "/echo",produces = MediaType.IMAGE_PNG_VALUE)
+    @PostMapping(value = "/echo",produces = MediaType.APPLICATION_JSON_VALUE)
     public Object echo(@RequestBody Message message){
         message.setTitle("[ECHO]"+message.getTitle());
         message.setContent("[ECHO]"+message.getContent());
+        this.messageService.echo("88888888888888888");
         return message;
     }
 }

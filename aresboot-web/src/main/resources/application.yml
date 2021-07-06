@@ -17,3 +17,5 @@ muyan:
 spring:
   profiles:
     active: dev # 默认生效的profile文件
+  messages:
+    basename:i18n/Message
