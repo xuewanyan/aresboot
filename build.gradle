@@ -119,6 +119,7 @@ project('aresboot-web'){ // 子模块
         implementation ('org.springframework.boot:spring-boot-starter-web') {
             exclude group : 'org.springframework.boot' , module : 'spring-boot-starter-tomcat'
         }
+        implementation 'org.springframework.boot:spring-boot-starter-aop'
     }
 }
 project('aresboot-common'){ // 子模块

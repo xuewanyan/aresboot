@@ -1,13 +1,18 @@
 import com.cn.lombok.MessageRead;
 import com.cn.lombok.SaleTicket;
+import com.cn.service.IMessageService;
+import com.cn.service.impl.MessageServiceImpl;
 import com.cn.vo.Message;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.File;
 import java.util.Date;
 
 public class MessageTest {
 
+    @Autowired
+    IMessageService messageService;
     @Test
     public void test(){
 //        Message message = Message.builder().title("建").content("造").pubdate(new Date()).build();
@@ -30,6 +35,9 @@ public class MessageTest {
         }
     }
 
-
+    @Test
+    public void messageService(){
+        this.messageService.echo("AOP");
+    }
 
 }
