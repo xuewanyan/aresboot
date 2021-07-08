@@ -4,6 +4,7 @@ import com.cn.service.IMessageService;
 import com.cn.vo.Message;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +22,7 @@ public class MessageAction extends BaseAction{ // 控制层实现类
      */
     private static final Logger logger = LoggerFactory.getLogger(MessageAction.class);
 
-    @Resource(name = "messageService")
+    @Autowired
     private IMessageService messageService;
 
     @PostMapping(value = "/echo",produces = MediaType.APPLICATION_JSON_VALUE)
@@ -29,6 +30,7 @@ public class MessageAction extends BaseAction{ // 控制层实现类
         message.setTitle("[ECHO]"+message.getTitle());
         message.setContent("[ECHO]"+message.getContent());
         this.messageService.echo("88888888888888888");
+        double i = 10/0;
         return message;
     }
 }

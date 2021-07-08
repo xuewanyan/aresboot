@@ -37,6 +37,7 @@ public class SourceAction {
         map.put("mysql",this.mysql);
         map.put("message",this.mag);
         map.put("infos",this.infos);
+        map.put("path",System.getProperty("java.class.path"));
         return map;
     }
 
