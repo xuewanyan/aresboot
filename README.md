@@ -96,4 +96,18 @@
 #P45 拦截器
     DefaultHandlerInterceptor implements HandlerInterceptor
 #P46 AOP拦截器
+    org.springframework.boot:spring-boot-starter-aop
     
+==============================2021-07-07============git分支 bt-20210707
+#P47 整合Email邮件服务
+    implementation group: 'org.springframework.boot',name: 'spring-boot-starter-mail'
+#P48 https安全访问
+#P49 全局错误页   
+    implements ErrorPageRegistrar
+#P50 全局异常处理
+    @ControllerAdvice
+#P51 全局数据绑定
+#P52 全局数据预处理
+    所有的请求数据为了接收方便实际上都会通过HttpServletRequest中的getParameterValues()方法来接收，
+    而接收到的内容全部都是数组，而在Spring里面把这个数组的内容自动调用了toString()实现了处理。
+     
