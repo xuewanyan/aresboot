@@ -2,6 +2,7 @@ import com.cn.lombok.MessageRead;
 import com.cn.lombok.SaleTicket;
 import com.cn.service.IMessageService;
 import com.cn.service.impl.MessageServiceImpl;
+import com.cn.vo.Company;
 import com.cn.vo.Message;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,6 +39,12 @@ public class MessageTest {
     @Test
     public void messageService(){
         this.messageService.echo("AOP");
+    }
+
+    @Test
+    public void equsa(){
+        Company messageRead = new Company();
+        System.out.println(Company.class.isInstance(messageRead));
     }
 
 }
