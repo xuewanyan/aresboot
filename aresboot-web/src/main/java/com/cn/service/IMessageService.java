@@ -1,5 +1,8 @@
 package com.cn.service;
 
+import com.cn.annotation.Treat;
+import com.cn.vo.Jsr3Message;
+
 public interface IMessageService {
-    public String echo(String msg);
+    public Jsr3Message echo(Jsr3Message message);
 }

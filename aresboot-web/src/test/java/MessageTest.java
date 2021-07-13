@@ -38,7 +38,7 @@ public class MessageTest {
 
     @Test
     public void messageService(){
-        this.messageService.echo("AOP");
+//        this.messageService.echo("AOP");
     }
 
     @Test
