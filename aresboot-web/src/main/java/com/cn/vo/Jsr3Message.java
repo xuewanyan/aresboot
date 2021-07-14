@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Data
 public class Jsr3Message {
 
-    @NotNull
+    @NotNull(message = "{message.title.notblank.error}")
     private String info;
 
     @NotNull

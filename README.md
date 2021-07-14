@@ -119,9 +119,27 @@
 #P54 JSR303数据验证规范
     JSR303由注解组成
 
-
-
-
+==============================2021-07-14============git分支 bt-20210714
+#P55 设置错误信息
+    资源文件名称“ValidationMessages.properties”
+#P56 自定义验证器
+    在JSR303的规范里面提供丰富的验证器，
+    扩展实现新的正则验证注解：
+    @Constraint(validatedBy = HandlerRegexValidation.class)使用此注解
+    @Inherited 加强注解: 用于当父类有自定义注解@Treat时候，子类继承之后也默认有其@Treat注解
+#P57 Thymeleaf简介（了解）
+    单应用，前后端不分离时候，springboot支持的使用。
+#P58 Thymeleaf编程起步（了解） 
+#P59 Thymeleaf环境配置（了解）
+#P60 整合静态资源（了解）
+#P61 路径访问支持（了解）
+#P62 读取资源文件（了解）    
+#P63 环境对象支持（了解）       
+#P64 对象输出（了解）  
+#P65 页面逻辑处理（了解）
+#P66 数据迭代处理（了解）
+...
+#P69 Actuator监控组件简介（掌握）
 
 
 
