@@ -19,3 +19,19 @@ spring:
     active: dev # 默认生效的profile文件
   messages:
     basename: i18n/Message
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" #开放全部的微服务监控端口
+      base-path: /actuator #监控服务的父路径
+
+logging:
+  level:
+    root: "info"
+    com.cn.action: "debug"
+  file: # 定义日志文件
+    path: ares-logs
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level [%logger] %msg%n"
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level [%logger] %msg%n"

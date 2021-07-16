@@ -139,12 +139,32 @@
 #P65 页面逻辑处理（了解）
 #P66 数据迭代处理（了解）
 ...
+
+==============================2021-07-15============git分支 bt-20210715
 #P69 Actuator监控组件简介（掌握）
-
-
-
-
-
+    springboot四大神器之首，
+    {
+    "_links": {
+    "self": {
+      "href": "http://localhost:8081/dev/actuator",
+      "templated": false
+    },
+    "health": { // 健康信息（微服务的状态） 执行结果：{"status":"UP"} ：健康
+      "href": "http://localhost:8081/dev/actuator/health",
+      "templated": false
+    },
+    "health-path": { // 健康信息的监控路径
+      "href": "http://localhost:8081/dev/actuator/health/{*path}",
+      "templated": true
+    }} }
+#P70 Actuator接口访问（掌握）
+#P71 heapdump(堆)（理解）
+#P72 info服务信息（理解）
+#P73 health服务信息（理解）
+#P74 远程关闭（理解）
+#P75 自定义Endpoint（理解）
+#P76 Lombok日志注解（掌握）
+#P77 springboot日志配置（掌握）
 
 
 
