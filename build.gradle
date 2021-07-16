@@ -114,22 +114,31 @@ project('aresboot-web'){ // 子模块
         implementation libraries.'jackson-dataformat-xml'
         implementation libraries.'jackson-databind'
         implementation libraries.'jackson-annotations'
+        // jetty启动容器
        // implementation 'org.springframework.boot:spring-boot-starter-jetty'
-        implementation 'org.springframework.boot:spring-boot-starter-undertow'
+        // undertow启动容器
+//        implementation 'org.springframework.boot:spring-boot-starter-undertow'
+
+        // 屏蔽tomcat启动容器
         implementation ('org.springframework.boot:spring-boot-starter-web') {
-            exclude group : 'org.springframework.boot' , module : 'spring-boot-starter-tomcat'
+           // exclude group : 'org.springframework.boot' , module : 'spring-boot-starter-tomcat'
         }
         implementation 'org.springframework.boot:spring-boot-starter-aop'
         implementation libraries.'hibernate-validator'
+        implementation 'org.springframework.boot:spring-boot-starter-actuator' // 监控
     }
 }
+
+
+
+
 project('aresboot-common'){ // 子模块
     dependencies { //配置子模块依赖
         implementation ('org.springframework.boot:spring-boot-starter-web') {
             exclude group : 'org.springframework.boot' , module : 'spring-boot-starter-tomcat'
         }
       //  implementation 'org.springframework.boot:spring-boot-starter-jetty'
-        implementation 'org.springframework.boot:spring-boot-starter-undertow'
+//        implementation 'org.springframework.boot:spring-boot-starter-undertow'
     }
 }
 
