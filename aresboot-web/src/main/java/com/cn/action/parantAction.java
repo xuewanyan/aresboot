@@ -15,7 +15,7 @@ import javax.validation.Valid;
 public class parantAction {
 
     @PostMapping("parant")
-    public void action(@RequestBody @Valid Parant parant){
+    public void action(@RequestBody Parant parant){
         log.trace("请求参数【{}】",parant);
         log.debug("请求参数【{}】",parant);
         log.info("请求参数【{}】",parant);
