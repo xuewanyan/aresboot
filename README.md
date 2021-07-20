@@ -172,13 +172,55 @@
 #P79 动态修改日志级别（掌握）
 #P80 MDC全链路跟踪（掌握）    
     添加MDC拦截器,注册config
-#P81 Actuator可视化工具（掌握）  
+
+==============================2021-07-19============git分支 bt-20210719    
+#P81 Actuator可视化工具（掌握）  ----linux 基本集群环境搭建
     VMware Workstation集成虚拟机Linux，回家安装虚拟机先
-
-
-
-
-
+    1、C:\Windows\System32\drivers\etc 修改windows houts配置文件
+        192.168.59.128 aresboot-producer
+        192.168.59.129 aresboot-prometheus
+        192.168.59.130 aresboot-grafana
+    2、vim /etc/hostname 修改主机名称
+        aresboot-producer
+    3、vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+        修改网卡ip（IPADDR=192.168.59.128）
+        修改网卡ip（IPADDR=192.168.59.129）
+        修改网卡ip（IPADDR=192.168.59.130）
+    4、vim /etc/hosts 修改hosts主机配置文件 
+        192.168.59.128 aresboot-producer
+        192.168.59.129 aresboot-prometheus
+        192.168.59.130 aresboot-grafana
+    5、重启全部主机
+        reboot
+#P82 NodeExporter
+        在整个微服务监控过程之中，除了需要针对于Springboot服务本身进行监控之外，最重要的一点就是需要及时的知道
+    当前主机（节点）所对应的性能状态，这个就可以清楚的知道当前的主机资源能否够用。
+        NodeExporter是由Prometheus所提供的开发组件，这个组件是一个独立的应用程序包，在需要的地方进行组件的导
+    入即可（本质上可以理解为一个独立的应用进程）。登录Prometheus.io
+    上传：node_exporter-1.1.2.linux-amd64.tar.gz到Linu系统之中
+    解压文件：tar xzvf /var/ftp/node_exporter-1.1.2.linux-amd64.tar.gz -C /usr/local/
+    目录更名：mv /usr/local/node_exporter-1.1.2.linux-amd64/ /usr/local/node_exporter
+    修改配置文件：vim /lib/systemd/system/node_exporter.service
+        [Unit]
+        Description=Node_Exporter Service
+        
+        [Service]
+        User=root
+        ExecStart=/usr/local/node_exporter/node_exporter
+        TimeoutStopSec=10
+        Restart=on-failure
+        RestartSec=5
+        
+        [Install]
+        WantedBy=multi-user.target
+    重新加载当前新的配置文件：systemctl daemon-reload
+    配置服务自动启动： systemctl enable node_exporter.service
+    配置关闭自动启动： systemctl disable node_exporter.service
+    手动启动：systemctl start node_exporter.service
+    查看服务状态：systemctl status node_exporter.service
+    查看端口占用情况：netstat -nptl
+    防火墙：firewall-cmd --zone=public --add-port=9100/tcp --permanent
+    重新加载防火墙配置：firewall-cmd reload
 
 
 
