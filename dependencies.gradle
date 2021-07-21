@@ -5,7 +5,8 @@ ext.vertions = [ // 定义所有要使用的版本号
     lombok                            : '1.18.20',
     fastjson                          : '1.2.75',
     jackson                           : '2.12.3',
-    hibernate                         : '6.2.0.Final'
+    hibernate                         : '6.2.0.Final',
+    prometheus                        : '1.7.2'
 ]
 ext.libraries=[
         'spring-boot-gradle-plugin'   : "org.springframework.boot:spring-boot-gradle-plugin:${vertions.springBoot}",
@@ -18,6 +19,7 @@ ext.libraries=[
         'jackson-dataformat-xml'      : "com.fasterxml.jackson.dataformat:jackson-dataformat-xml:${vertions.jackson}",
         'jackson-databind'            : "com.fasterxml.jackson.core:jackson-databind:${vertions.jackson}",
         'jackson-annotations'         : "com.fasterxml.jackson.core:jackson-annotations:${vertions.jackson}",
-        'hibernate-validator'         : "org.hibernate:hibernate-validator:${vertions.hibernate}"
+        'hibernate-validator'         : "org.hibernate:hibernate-validator:${vertions.hibernate}",
+        'micrometer-registry-prometheus'         : "io.micrometer:micrometer-registry-prometheus:${vertions.prometheus}",
 ]
 

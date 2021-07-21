@@ -126,6 +126,7 @@ project('aresboot-web'){ // 子模块
         implementation 'org.springframework.boot:spring-boot-starter-aop'
         implementation libraries.'hibernate-validator'
         implementation 'org.springframework.boot:spring-boot-starter-actuator' // 监控
+        implementation libraries.'micrometer-registry-prometheus' // 监控
     }
 }
 

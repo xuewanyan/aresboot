@@ -220,15 +220,76 @@
     查看服务状态：systemctl status node_exporter.service
     查看端口占用情况：netstat -nptl
     防火墙：firewall-cmd --zone=public --add-port=9100/tcp --permanent
-    重新加载防火墙配置：firewall-cmd reload
+    重新加载防火墙配置：firewall-cmd --reload
 
-
-
-
-
-
-
-
+==============================2021-07-20============git分支 bt-20210720    
+#P83 Prometheus监控数据
+    打包 gradle bootJar
+    后台运行jar:nohup java -jar /var/ftp/ares-boot-1.0.0-lee.jar > /usr/local/yootk.log 2>&1 &
+    添加防火墙端口：firewall-cmd --zone=public --add-port=8081/tcp --permanent
+    重新加载防火墙配置：firewall-cmd --reload
+#P84 Prometheus服务搭建
+    1、下载https://prometheus.io/download/#prometheus（prometheus-2.28.1.linux-amd64.tar.gz）
+    2、上传ftp
+    3、解压 tar -xzvf /var/ftp/prometheus-2.28.1.linux-amd64.tar.gz -C /usr/local/
+    4、将解压后的版本号取消 mv /usr/local/prometheus-2.28.1.linux-amd64/ /usr/local/prometheus
+    5、修改 prometheus.yml配置文件
+        scrape_configs:
+          - job_name: 'prometheus'
+            static_configs:
+            - targets: ['aresboot-prometheus:9999']
+          - job_name: 'node'
+            static_configs:
+            - targets: ['aresboot-producer:9100']
+              labels:
+                instance: aresboot-producer-node
+          - job_name: 'aresboot'
+            scrape_interval: 10s
+            scrape_timeout: 5s
+            metrics_path: '/actuator/prometheus'
+            static_configs:
+               - targets: ['aresboot-producer:8081']
+    6、检查当前配置文件的定义是否正确（/usr/local/prometheus/promtool check config /usr/local/prometheus/prometheus.yml）
+    7、配置服务自动启动（vim /usr/lib/systemd/system/prometheus.service）
+        [Unit]
+        Description=Node_Exporter Service
+        
+        [Service]
+        User=root
+        ExecStart=/usr/local/prometheus/prometheus \
+        		--config.file=/usr/local/prometheus/prometheus.yml \
+        		--storage.tsdb.path=/user/local/prometheus/data \
+        		--web.listen-address=0.0.0.0:9999 --web.enable-lifecycle
+        TimeoutStopSec=10
+        Restart=on-failure
+        RestartSec=5
+        
+        [Install]
+        WantedBy=multi-user.target
+    8、重新加载当前新的配置文件：systemctl daemon-reload
+    9、配置服务自动启动： systemctl enable prometheus.service
+    10、手动启动：systemctl start prometheus.service
+    11、查看服务状态：systemctl status prometheus.service
+    12、firewall-cmd --zone=public --add-port=9999/tcp --permanent
+    13、重新加载防火墙配置：firewall-cmd --reload
+    14、访问：http://aresboot-prometheus:9999
+        - node_memory_Active_bytes(处理器cpu使用情况)
+#P85 Gragana可视化
+    1、访问官网：https://grafana.com/grafana/download
+    2、下载组件：wget https://dl.grafana.com/oss/release/grafana_8.0.6_amd64.deb
+    3、解压 ：tar -xzvf /var/ftp/grafana-8.0.6.linux-amd64.tar.gz -C /usr/local
+    4、改名去除文件夹版本号：mv /usr/local/grafana-8.0.6 /usr/local/grafana
+    5、修改配置文件（vim /usr/lib/systemd/system/grafana.service）
+    6、重新加载配置文件 systemctl daemon-reload
+    7、配置自动启动：systemctl enable grafana.service
+    8、启动服务：systemctl start grafana.service
+    9、查看服务启动状态：systemctl status grafana.service
+    10、查看端口占用情况：netstat -nptl
+    11、开启防火墙：firewall-cmd --zone=public --add-port=3000/tcp --permanent
+    12、重新加载防火墙：firewall-cmd --reload
+    13:访问：http://aresboot-grafana:3000
+#P86 监控警报 Gragana可视化    
+#P87 警报测试
 
 
 
