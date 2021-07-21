@@ -1,4 +1,4 @@
 server:
   port: 8083
   servlet:
-    context-path: prod
+    context-path: /prod

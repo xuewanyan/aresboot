@@ -3,7 +3,7 @@
     <!-- 项目名称 -->
     <property name="PROJECT_NAME" value="aresboot"/>
     <!--定义日志文件的存储地址 勿在 LogBack  -->
-    <property name="LOG_HOME" value="D:/dev/logs"/>
+    <property name="LOG_HOME" value="home/xy/bootlogs"/>
 
     <!-- 控制台输出 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
