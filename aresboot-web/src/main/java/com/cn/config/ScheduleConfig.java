@@ -1,0 +1,19 @@
+package com.cn.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.scheduling.annotation.SchedulingConfigurer;
+import org.springframework.scheduling.config.ScheduledTaskRegistrar;
+import java.util.concurrent.Executors;
+
+@Configuration
+public class ScheduleConfig implements SchedulingConfigurer {
+
+    /**
+     * 设置线程池大小
+     * @param taskRegistrar
+     */
+    @Override
+    public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
+        taskRegistrar.setScheduler(Executors.newScheduledThreadPool(2));
+    }
+}

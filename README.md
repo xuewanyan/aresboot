@@ -291,17 +291,36 @@
 #P86 监控警报 Gragana可视化    
 #P87 警报测试
 
-
-
-
-
-
-
-
-
-
-
-
+==============================2021-07-21============git分支 bt-20210721   
+#P88 spring定时任务
+    启动类添加：@EnableScheduling,定时类加:@Schedule()
+    线程池：防止线程阻塞引起单线程跑批定时任务
+#P89 ShedLock分布式定时任务
+    1、使用redis。
+       - 1、C:\Windows\System32\drivers\etc 修改windows houts配置文件
+            192.168.59.131 redis-single
+       - 2、vim /etc/hostname 修改主机名称
+           redis-single
+       - 3、vim /etc/sysconfig/network-scripts/ifcfg-ens33 
+            修改网卡ip（IPADDR=192.168.59.131）
+       - 4、vim /etc/hosts 修改hosts主机配置文件 
+            192.168.59.128 aresboot-producer
+            192.168.59.129 aresboot-prometheus
+            192.168.59.130 aresboot-grafana
+            192.168.59.131 redis-single
+       - 5、重启全部主机
+            reboot
+    2、启动redis（src/redis-server /usr/local/redis/redis.conf）
+    3、设置redis密码：vim /usr/local/redis/redis.conf 新增 requirepass 404044
+    4、重启或者停止redis：src/redis-cli -> auth 404044 > shutdown 停止
+#P89 ShedLock动态任务管理
+#P90 自定义事件
+    事件解耦    
+#P91 自定义事件处理
+    event->
+#P92 @EventListener
+    监听事件注解,定义一个config事件
+    
 
 
 
