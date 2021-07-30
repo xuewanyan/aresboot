@@ -1,5 +1,6 @@
 package com.cn.action;
 
+import com.cn.vo.CustInfo;
 import com.cn.vo.Source;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -38,6 +39,8 @@ public class SourceAction {
         map.put("message",this.mag);
         map.put("infos",this.infos);
         map.put("path",System.getProperty("java.class.path"));
+        CustInfo custInfo = new CustInfo();
+        custInfo.name(this.mag).sex("女").idNo("隔壁测试监听事件");
         return map;
     }
 

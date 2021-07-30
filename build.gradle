@@ -127,6 +127,10 @@ project('aresboot-web'){ // 子模块
         implementation libraries.'hibernate-validator'
         implementation 'org.springframework.boot:spring-boot-starter-actuator' // 监控
         implementation libraries.'micrometer-registry-prometheus' // 监控
+        implementation libraries.'shedlock-spring'  // 分布式组件
+        implementation libraries.'shedlock-provider-redis-spring'  // redis
+        implementation libraries.'spring-boot-starter-data-redis' // redis
+        implementation libraries.'commons-pool2' // 连接池
     }
 }
 

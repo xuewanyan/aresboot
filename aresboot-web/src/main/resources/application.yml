@@ -16,9 +16,23 @@ muyan:
 
 spring:
   profiles:
-    active: test # 默认生效的profile文件
+    active: dev # 默认生效的profile文件
   messages:
     basename: i18n/Message
+  redis:
+    host: 192.168.59.131
+    port: 6379
+    password: 404044
+    database: 0 #第0个数据库
+    timeout: 200
+    connect-timeout: 200
+    lettuce: #连接池
+      pool:
+        max-active: 100
+        max-idle: 20
+        min-idle: 10
+        max-wait: 1000
+        time-between-eviction-runs: 2000 #每2S回收一次连接
 management:
   endpoints:
     web:
