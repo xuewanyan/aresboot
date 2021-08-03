@@ -9,7 +9,7 @@ import java.time.Clock;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 自定义事件处理
+ * 自定义事件处理,使用注解后这个包装类可以省略
  * @author xy
  * @date 2021-7-28
  */
