@@ -8,9 +8,15 @@
         <processorPath useClasspath="false">
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.20/18bcea7d5df4d49227b4a0743a536208ce4825bb/lombok-1.18.20.jar" />
         </processorPath>
-        <module name="aresboot.aresboot-web.main" />
+        <module name="aresboot.aresboot-rsocket-base.main" />
+        <module name="aresboot.aresboot-webservice-common.main" />
+        <module name="aresboot.aresboot-webservice-client.main" />
+        <module name="aresboot.aresboot-autoConfig-starter.main" />
         <module name="aresboot.aresboot-common.main" />
         <module name="aresboot.untitled.main" />
+        <module name="aresboot.aresboot-web.main" />
+        <module name="aresboot.aresboot-webservice-server.main" />
+        <module name="aresboot.aresboos-rsocket-base.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8" />

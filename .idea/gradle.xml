@@ -11,8 +11,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/aresboos-rsocket-base" />
+            <option value="$PROJECT_DIR$/aresboot-autoConfig-starter" />
             <option value="$PROJECT_DIR$/aresboot-common" />
+            <option value="$PROJECT_DIR$/aresboot-rsocket-base" />
             <option value="$PROJECT_DIR$/aresboot-web" />
+            <option value="$PROJECT_DIR$/aresboot-webservice-client" />
+            <option value="$PROJECT_DIR$/aresboot-webservice-common" />
+            <option value="$PROJECT_DIR$/aresboot-webservice-server" />
             <option value="$PROJECT_DIR$/untitled" />
           </set>
         </option>

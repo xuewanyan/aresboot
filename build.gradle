@@ -49,9 +49,7 @@ subprojects { // 子模块
     }
     dependencies { // 公共依赖库管理
         implementation 'org.springframework.boot:spring-boot-devtools'
-        testImplementation('org.springframework.boot:spring-boot-starter-test'){
-            exclude group : 'junit' , module : 'junit'
-        }
+        testImplementation('org.springframework.boot:spring-boot-starter-test')
         implementation (enforcedPlatform(libraries.'junit-bom'))
         implementation libraries.'junit-jupiter-api'
         implementation libraries.'junit-jupiter-engine'
@@ -131,12 +129,15 @@ project('aresboot-web'){ // 子模块
         implementation libraries.'shedlock-provider-redis-spring'  // redis
         implementation libraries.'spring-boot-starter-data-redis' // redis
         implementation libraries.'commons-pool2' // 连接池
+        implementation ('org.springframework.boot:spring-boot-starter-websocket')
     }
 }
-
-
-
-
+project('aresboos-rsocket-base'){ // 子模块
+    dependencies { //配置子模块依赖
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-rsocket'
+    }
+}
 project('aresboot-common'){ // 子模块
     dependencies { //配置子模块依赖
         implementation ('org.springframework.boot:spring-boot-starter-web') {
@@ -144,6 +145,11 @@ project('aresboot-common'){ // 子模块
         }
       //  implementation 'org.springframework.boot:spring-boot-starter-jetty'
 //        implementation 'org.springframework.boot:spring-boot-starter-undertow'
+    }
+}
+project('aresboot-autoConfig-starter'){ // 子模块
+    dependencies { //配置子模块依赖
+        implementation 'org.springframework.boot:spring-boot-starter-web'
     }
 }
 

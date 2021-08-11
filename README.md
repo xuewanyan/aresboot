@@ -313,21 +313,74 @@
     2、启动redis（src/redis-server /usr/local/redis/redis.conf）
     3、设置redis密码：vim /usr/local/redis/redis.conf 新增 requirepass 404044
     4、重启或者停止redis：src/redis-cli -> auth 404044 > shutdown 停止
-#P89 ShedLock动态任务管理
-#P90 自定义事件
+#P90 ShedLock动态任务管理
+#P91 自定义事件
     事件解耦    
-#P91 自定义事件处理
+#P92 自定义事件处理
     event->
-#P92 @EventListener
+#P93 @EventListener
     监听事件注解,定义一个config事件
     
-
-
-
-
-
-
-
-
-
-
+==============================2021-08-03============git分支 bt-20210803
+#P94 WebService简介
+#P95 搭建WebService服务端  
+#P96 搭建WebService客户端
+#P97 WebSocket简介
+    在程序开发过程中，WEB2.0最重要的代表就是AJAX（伪异步应用）
+    WebSocket如果要使用肯定还是解决传统的Ajax轮询问题。
+    在整个的处理机制里面可以清楚的发现，WebSocket客户端如果要连接到服务器端之后可以在一个连接之内
+    进行多次的数据处理操作。    
+    可以解决跨域问题。
+#P98 开发WebSocket服务端
+#P99 开发WebSocket客户端
+#P100 Springboot异步   
+    现在的JAVA届。只要说到异步，就会联想到（Thread,Runnable,Callable,J.U.C）,之所以采用异步处理原则，主要为了提高
+    处理性能。还提供了WebAsyncTask、DeferredResult线程管理类。
+#P101 Callable实现异步处理
+    Callable是由J.U.C提供的一个线程接口，在使用Callable接口的时候可以方便的实现数据的返回处理，可以进行异步
+    返回的操作功能处理，这一点要比传统的使用的Runnable更加简单（Spring对于Runnable没有放弃）。     
+#P102 WebAsyncTask  
+        WebAsyncTask是一个由Spring提供的异步任务管理类，开发者可以直接在此类中配置要执行的请求处理的异步线程，
+    同时也可以配置一个与之相关的超时管理及处理线程，这样在程序出现超时问题后，可以启动另外一个线程进行处理。
+        如果要在项目之中启动异步线程，目的就是为了解决超时执行的问题。
+#P103 DeferredResult
+    实现异步线程控制。基于Runnable  
+#P104 Springboot异步任务
+    1、异步任务并不参与响应
+    2、异步任务的执行完成与否最终的响应没有什么关系
+#P105 响应式编程简介
+        如果要说到响应式编程，那么最初就是Servlet3.x所提供的异步处理支持（AsycContext），这是一个原始的响应编程，
+    但是这种响应编程机制实现难度是较高的，而且代码也非常繁琐。
+#P106 WebFlux终端响应
+        WebFlux是基于Servlet3.x之后异步响应处理所提供的更简化的实现模式，其最终的实现依靠的也是Spring自己推广
+    的一个开源项目：projectreactor.io。
+#P107 Springboot整合WebFlux
+#P108 Flux返回集合数据    
+#P109 Websock支持
+#P110 RSocket
+        Rsocket是一个协议，是一个类似于HTTP上的通讯协议，之所以推出Springboot技术，主要是为了前后端设计分离，
+    因为基于HTTP协议可以直接返回REST数据内容。
+        目的是解决物联网的通讯协议。
+        HTTP协议中的一切的数据都是以文本形式进行传输，所以在实际开发中就会存在数据传输过大y以及传输结构受限的问题。
+        RSocket四种数据交互模式：
+            1、Request - And - Response:请求/响应，类似于HTTP的通信特点，提供异步通信与多路复用支持。
+            2、Request -Response - Stream:请求/流式响应，一个请求对应多个流式响应，；例如：获取视频列表或产品列表。
+            3、Fire - And - Forget:异步触发，可以用于日志记录。
+            4、Channel(bi - directional streams):双向异步通讯，消息流在服务端与客户端两个方向上异步流动。
+#P111 RSocket基础开发
+#P112 搭建RSocket服务端            
+#P113 搭建RSocket客户端     
+#P114 RSocket文件上传   
+#P115 基于RSocket开发WebSocket        
+#P116 自动装配简介
+#P117 @EnableConfigurationProperties
+        按照原始的讲解方式，如果一个bean类的定义上出现有“@EnableConfigurationProperties”，注解项，
+    那么就表示该定义为一个组件，否则程序会出现错误，但是此时的配置的启用并不是通过这种“@Component”注解完成
+    的，而是通过另外的注解实现的，所以此时即使有错误，也暂时不关注。
+#P118 @Import注解
+        此注解是将Bean加入到Spring实例管理之中，需要注意的是，如果需要使用@Import，本身却有三种不同的处理形式：
+    类导入、ImportSelector导入、ImportBeanDefinitionRegistrar导入。
+        方式一：直接进行指定Bean的导入。
+        方式二：如果此时你需要注入的Bean有很多，那么按照以上的方式去编写的话就需要写上所有要注册Bean的名称。
+                这样就可以使用ImportSelector导入。
+        方式三：以上都是由Spring容器负责了Bean的注册，开发者自己定义处理，可以使用“ImportBeanDefinitionRegistrar”。
