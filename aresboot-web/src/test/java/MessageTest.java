@@ -35,7 +35,6 @@ public class MessageTest {
 
     @Test
     public Class<?> messageService() throws ClassNotFoundException {
-        // 测试reset
         StackTraceElement[] stackTrace = new RuntimeException().getStackTrace();
         for (StackTraceElement stackTraceElement : stackTrace) {
             if ("main".equals(stackTraceElement.getMethodName())) {
