@@ -1,14 +1,11 @@
 import com.cn.lombok.MessageRead;
 import com.cn.lombok.SaleTicket;
 import com.cn.service.IMessageService;
-import com.cn.service.impl.MessageServiceImpl;
 import com.cn.vo.Company;
-import com.cn.vo.Message;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.File;
-import java.util.Date;
 
 public class MessageTest {
 
@@ -37,10 +34,17 @@ public class MessageTest {
     }
 
     @Test
-    public void messageService(){
-//        this.messageService.echo("AOP");
-    }
+    public Class<?> messageService() throws ClassNotFoundException {
+        StackTraceElement[] stackTrace = new RuntimeException().getStackTrace();
+        for (StackTraceElement stackTraceElement : stackTrace) {
+            if ("main".equals(stackTraceElement.getMethodName())) {
+                System.out.println(stackTraceElement.getMethodName());
+                return Class.forName(stackTraceElement.getClassName());
+            }
 
+        }
+        return  null;
+    }
     @Test
     public void equsa(){
         Company messageRead = new Company();

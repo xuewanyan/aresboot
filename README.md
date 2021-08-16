@@ -384,3 +384,31 @@
         方式二：如果此时你需要注入的Bean有很多，那么按照以上的方式去编写的话就需要写上所有要注册Bean的名称。
                 这样就可以使用ImportSelector导入。
         方式三：以上都是由Spring容器负责了Bean的注册，开发者自己定义处理，可以使用“ImportBeanDefinitionRegistrar”。
+
+==============================2021-08-03============git分支 bt-20210803
+#P119 application.yml提示
+        引入org.springframework.boot:spring-boot-configuration-processor包。
+#P120 自定义starter组件
+        最重要的spring.factories文件。
+#P121 springboot核心启动类
+        如果想要去理解Springboot启动流程，实际上就需要分为两个阶段来进行理解，第一个阶段就是注解操作部分，第二个
+    才是具体的程序的应用部分。
+        在springboot程序启动注解之中就可以发现主要会存在两个子注解：
+            - @SpringBootConfiguration：springBoot的启动代理模式配置
+            - @EnableAutoConfiguration：启用自动装配
+        此时重点观察的是“DeferredImportSelector”接口，因为该类主要用于“@import”注解之中，所以只需要观察其
+    如何配置扫描Bean注册即可，观察核心的方法覆写。
+        最终所有的扫描配置（包括所有排除的配置）实际上都是通过这个类来实现管理的，那么也就相当于，开发者只需要在
+    启动类中配置了一个“SpringBootApplication”注解之后由具体的Selector来负责排除以及扫描包的定义。
+#P122 SpringBootApplication构造方法
+        面试题：linkedHashSet:主要用来将获取的对象按照顺序保存在一个集合之中。  
+        结论：
+            SpringApplication类中的构造方法主要完成了如下的几件事情：
+                1、获取ResourceLoader接口实例，获取此接口实例的目的是为了便于类加载操作（获取类加载器）。
+                2、获取所有的主类，只有一个是主类，所以还需要对主类的结构进行分析。
+                3、会自动分析当前的运行模式是Servlet(传统模式)还是Reactive（响应式）。
+                4、获取所有的类加载器（包括通过AutoConfiguration + Starter配置的类加载器）。
+                5、初始化所有的Bean对象b并且自动进行Bean注册。
+                6、设置所有的监听操作，包括时间监听等。
+                
+                 

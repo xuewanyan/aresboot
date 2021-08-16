@@ -1,6 +1,6 @@
 package com.yitong.regist;
 
-import com.yitong.vo.Detp;
+import com.yitong.voa.Detp;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.context.annotation.ImportBeanDefinitionRegistrar;

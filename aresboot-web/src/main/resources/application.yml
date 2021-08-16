@@ -39,3 +39,9 @@ management:
       exposure:
         include: "*" #开放全部的微服务监控端口
       base-path: /actuator #监控服务的父路径
+xueyan:
+  yookt:
+    dept:
+      dloc: 我的1
+      deptno: 12
+      dname: 我的2

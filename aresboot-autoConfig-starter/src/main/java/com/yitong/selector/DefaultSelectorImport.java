@@ -1,5 +1,6 @@
 package com.yitong.selector;
 
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 
@@ -11,6 +12,6 @@ import org.springframework.core.type.AnnotationMetadata;
 public class DefaultSelectorImport implements ImportSelector {
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
-        return new String[]{"com.yitong.vo.Detp"};
+        return new String[]{"com.yitong.voa.Detp"};
     }
 }

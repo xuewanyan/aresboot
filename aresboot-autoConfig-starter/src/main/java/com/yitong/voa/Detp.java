@@ -1,4 +1,4 @@
-package com.yitong.vo;
+package com.yitong.voa;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

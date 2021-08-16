@@ -1,7 +1,7 @@
 package com.cn;
 
 import com.yitong.StartAutoConfigApplication;
-import com.yitong.vo.Detp;
+import com.yitong.voa.Detp;
 import org.junit.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,13 +1,9 @@
-package com.yitong.config;
+package com.yitong.configa;
 
-import com.yitong.regist.DefaultRegistBean;
-import com.yitong.selector.DefaultSelectorImport;
-import com.yitong.vo.Detp;
-import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
+import com.yitong.voa.Detp;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
 
 import java.util.ArrayList;
 import java.util.List;

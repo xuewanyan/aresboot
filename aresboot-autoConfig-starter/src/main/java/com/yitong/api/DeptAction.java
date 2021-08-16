@@ -1,11 +1,8 @@
 package com.yitong.api;
 
-import com.yitong.config.BeanConfig;
-import com.yitong.config.XyAutoConfiguration;
-import com.yitong.vo.Detp;
+import com.yitong.voa.Detp;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -108,7 +108,8 @@ subprojects { // 子模块
 
 project('aresboot-web'){ // 子模块
     dependencies {
-        implementation project(':aresboot-common') // 引入其他子模块
+        implementation (project(':aresboot-common')) // 引入其他子模块
+        implementation (project(':aresboot-autoConfig-starter')) // 引入其他子模块
         implementation libraries.'jackson-dataformat-xml'
         implementation libraries.'jackson-databind'
         implementation libraries.'jackson-annotations'
@@ -150,6 +151,7 @@ project('aresboot-common'){ // 子模块
 project('aresboot-autoConfig-starter'){ // 子模块
     dependencies { //配置子模块依赖
         implementation 'org.springframework.boot:spring-boot-starter-web'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     }
 }
 

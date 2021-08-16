@@ -11,12 +11,19 @@
         <module name="aresboot.aresboot-rsocket-base.main" />
         <module name="aresboot.aresboot-webservice-common.main" />
         <module name="aresboot.aresboot-webservice-client.main" />
-        <module name="aresboot.aresboot-autoConfig-starter.main" />
         <module name="aresboot.aresboot-common.main" />
         <module name="aresboot.untitled.main" />
         <module name="aresboot.aresboot-web.main" />
         <module name="aresboot.aresboot-webservice-server.main" />
         <module name="aresboot.aresboos-rsocket-base.main" />
+      </profile>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.20/18bcea7d5df4d49227b4a0743a536208ce4825bb/lombok-1.18.20.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-configuration-processor/2.5.1/2a5077776e83fe3ed7a454d5483076edf6f7081d/spring-boot-configuration-processor-2.5.1.jar" />
+        </processorPath>
+        <module name="aresboot.aresboot-autoConfig-starter.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8" />
