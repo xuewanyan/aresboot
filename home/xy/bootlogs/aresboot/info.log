@@ -1,301 +1,132 @@
-[2021-08-12 14:21:54.166] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 14:21:54.194] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 59464 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 14:21:54.196] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 14:21:54.354] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 14:21:54.355] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 14:21:56.764] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 14:21:56.768] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 14:21:56.830] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 27 ms. Found 0 Redis repository interfaces.
-[2021-08-12 14:21:57.133] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$95d4a1d4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 14:21:57.758] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 14:21:57.999] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 14:21:58.013] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 14:21:58.014] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 14:21:58.015] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 14:21:58.134] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 14:21:58.135] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 3779 ms
-[2021-08-12 14:21:58.141] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 14:21:58.147] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 14:21:58.431] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 14:21:58.432] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 14:21:58.547] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 14:21:58.576] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
+[2021-09-17 17:18:26.448] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStarting] [55] - Starting SpringApplicationStart using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 19156 (D:\gitRepos\aresboot\aresboot-database\build\classes\java\main started by xy in D:\gitRepos\aresboot)
+[2021-09-17 17:18:26.454] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStartupProfileInfo] [663] - The following profiles are active: dev
+[2021-09-17 17:18:26.515] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-17 17:18:26.516] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-17 17:18:27.880] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
+[2021-09-17 17:18:27.887] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
+[2021-09-17 17:18:27.888] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
+[2021-09-17 17:18:27.888] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[2021-09-17 17:18:27.949] [INFO ] [restartedMain] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [log] [173] - Initializing Spring embedded WebApplicationContext
+[2021-09-17 17:18:27.949] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1432 ms
+[2021-09-17 17:18:29.041] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - Loaded jar:file:/C:/Users/xy/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions/4.0.6/1ae19829fd88f5467f45dd1bd9713473f008ff53/transactions-4.0.6.jar!/transactions-defaults.properties
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.allow_subtransactions = true
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.recovery_delay = 10000
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.automatic_resource_registration = true
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.oltp_max_retries = 5
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.client_demarcation = false
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.threaded_2pc = false
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.serial_jta_transactions = true
+[2021-09-17 17:18:29.046] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.log_base_dir = D:\gitRepos\aresboot\transaction-logs
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.rmi_export_class = none
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.max_actives = 50
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.checkpoint_interval = 500
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.enable_logging = true
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.log_base_name = tmlog
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.max_timeout = 300000
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.trust_client_tm = false
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.tm_unique_name = 172.20.10.2.tm
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+[2021-09-17 17:18:29.047] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.oltp_retry_interval = 10000
+[2021-09-17 17:18:29.048] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: java.naming.provider.url = rmi://localhost:1099
+[2021-09-17 17:18:29.048] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+[2021-09-17 17:18:29.048] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.default_jta_timeout = 10000
+[2021-09-17 17:18:29.048] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - Using default (local) logging and recovery...
+[2021-09-17 17:18:29.298] [INFO ] [restartedMain] [com.alibaba.druid.pool.DruidDataSource] [init] [986] - {dataSource-1} inited
+[2021-09-17 17:18:29.666] [INFO ] [restartedMain] [o.s.b.d.autoconfigure.OptionalLiveReloadServer] [startServer] [58] - LiveReload server is running on port 35729
+[2021-09-17 17:18:29.671] [INFO ] [restartedMain] [o.s.b.actuate.endpoint.web.EndpointLinksResolver] [<init>] [58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2021-09-17 17:18:29.706] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Starting ProtocolHandler ["http-nio-8081"]
+[2021-09-17 17:18:29.719] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [start] [220] - Tomcat started on port(s): 8081 (http) with context path ''
+[2021-09-17 17:18:29.732] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStarted] [61] - Started SpringApplicationStart in 3.699 seconds (JVM running for 4.325)
+[2021-09-17 17:18:29.903] [INFO ] [RMI TCP Connection(1)-172.20.10.2] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [log] [173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-09-17 17:18:29.903] [INFO ] [RMI TCP Connection(1)-172.20.10.2] [org.springframework.web.servlet.DispatcherServlet] [initServletBean] [525] - Initializing Servlet 'dispatcherServlet'
+[2021-09-17 17:18:29.904] [INFO ] [RMI TCP Connection(1)-172.20.10.2] [org.springframework.web.servlet.DispatcherServlet] [initServletBean] [547] - Completed initialization in 1 ms
+[2021-09-17 17:18:29.906] [INFO ] [RMI TCP Connection(2)-172.20.10.2] [com.alibaba.druid.pool.DruidDataSource] [init] [986] - {dataSource-2} inited
+[2021-09-17 18:06:41.339] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStarting] [55] - Starting SpringApplicationStart using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 19572 (D:\gitRepos\aresboot\aresboot-database\build\classes\java\main started by xy in D:\gitRepos\aresboot)
+[2021-09-17 18:06:41.344] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStartupProfileInfo] [663] - The following profiles are active: dev
+[2021-09-17 18:06:41.433] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-17 18:06:41.434] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-17 18:06:46.285] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
+[2021-09-17 18:06:46.302] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
+[2021-09-17 18:06:46.304] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
+[2021-09-17 18:06:46.304] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[2021-09-17 18:06:46.462] [INFO ] [restartedMain] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [log] [173] - Initializing Spring embedded WebApplicationContext
+[2021-09-17 18:06:46.462] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 5027 ms
+[2021-09-17 18:06:49.640] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - Loaded jar:file:/C:/Users/xy/.gradle/caches/modules-2/files-2.1/com.atomikos/transactions/4.0.6/1ae19829fd88f5467f45dd1bd9713473f008ff53/transactions-4.0.6.jar!/transactions-defaults.properties
+[2021-09-17 18:06:49.657] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.default_max_wait_time_on_shutdown = 9223372036854775807
+[2021-09-17 18:06:49.657] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.allow_subtransactions = true
+[2021-09-17 18:06:49.658] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.recovery_delay = 10000
+[2021-09-17 18:06:49.658] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.automatic_resource_registration = true
+[2021-09-17 18:06:49.659] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.oltp_max_retries = 5
+[2021-09-17 18:06:49.659] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.client_demarcation = false
+[2021-09-17 18:06:49.660] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.threaded_2pc = false
+[2021-09-17 18:06:49.660] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.serial_jta_transactions = true
+[2021-09-17 18:06:49.660] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.log_base_dir = D:\gitRepos\aresboot\transaction-logs
+[2021-09-17 18:06:49.661] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.rmi_export_class = none
+[2021-09-17 18:06:49.661] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.max_actives = 50
+[2021-09-17 18:06:49.662] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.checkpoint_interval = 500
+[2021-09-17 18:06:49.662] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.enable_logging = true
+[2021-09-17 18:06:49.663] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.log_base_name = tmlog
+[2021-09-17 18:06:49.663] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.max_timeout = 300000
+[2021-09-17 18:06:49.663] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.trust_client_tm = false
+[2021-09-17 18:06:49.664] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory
+[2021-09-17 18:06:49.664] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.tm_unique_name = 172.20.10.2.tm
+[2021-09-17 18:06:49.665] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000
+[2021-09-17 18:06:49.665] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.oltp_retry_interval = 10000
+[2021-09-17 18:06:49.665] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: java.naming.provider.url = rmi://localhost:1099
+[2021-09-17 18:06:49.666] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false
+[2021-09-17 18:06:49.666] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - USING: com.atomikos.icatch.default_jta_timeout = 10000
+[2021-09-17 18:06:49.669] [INFO ] [restartedMain] [com.atomikos.icatch.provider.imp.AssemblerImp] [logInfo] [28] - Using default (local) logging and recovery...
+[2021-09-17 18:06:50.466] [INFO ] [restartedMain] [com.alibaba.druid.pool.DruidDataSource] [init] [986] - {dataSource-1} inited
+[2021-09-17 18:06:51.399] [INFO ] [restartedMain] [o.s.b.d.autoconfigure.OptionalLiveReloadServer] [startServer] [58] - LiveReload server is running on port 35729
+[2021-09-17 18:06:51.412] [INFO ] [restartedMain] [o.s.b.actuate.endpoint.web.EndpointLinksResolver] [<init>] [58] - Exposing 1 endpoint(s) beneath base path '/actuator'
+[2021-09-17 18:06:51.488] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Starting ProtocolHandler ["http-nio-8081"]
+[2021-09-17 18:06:51.515] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [start] [220] - Tomcat started on port(s): 8081 (http) with context path ''
+[2021-09-17 18:06:51.543] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStarted] [61] - Started SpringApplicationStart in 10.945 seconds (JVM running for 11.616)
+[2021-09-17 18:06:52.245] [INFO ] [RMI TCP Connection(1)-172.20.10.2] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [log] [173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-09-17 18:06:52.245] [INFO ] [RMI TCP Connection(1)-172.20.10.2] [org.springframework.web.servlet.DispatcherServlet] [initServletBean] [525] - Initializing Servlet 'dispatcherServlet'
+[2021-09-17 18:06:52.247] [INFO ] [RMI TCP Connection(1)-172.20.10.2] [org.springframework.web.servlet.DispatcherServlet] [initServletBean] [547] - Completed initialization in 1 ms
+[2021-09-17 18:06:52.250] [INFO ] [RMI TCP Connection(2)-172.20.10.2] [com.alibaba.druid.pool.DruidDataSource] [init] [986] - {dataSource-2} inited
+[2021-09-17 18:13:45.181] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStarting] [55] - Starting SpringApplicationStart using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 18040 (D:\gitRepos\aresboot\aresboot-database\build\classes\java\main started by xy in D:\gitRepos\aresboot)
+[2021-09-17 18:13:45.184] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStartupProfileInfo] [663] - The following profiles are active: dev
+[2021-09-17 18:13:45.219] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-17 18:13:45.220] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-17 18:13:46.468] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
+[2021-09-17 18:13:46.474] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
+[2021-09-17 18:13:46.475] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
+[2021-09-17 18:13:46.475] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[2021-09-17 18:13:46.531] [INFO ] [restartedMain] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [log] [173] - Initializing Spring embedded WebApplicationContext
+[2021-09-17 18:13:46.531] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1311 ms
+[2021-09-17 18:13:46.719] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
+[2021-09-17 18:13:46.738] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 14:40:18.380] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 14:40:18.385] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 44692 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 14:40:18.385] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 14:40:18.423] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 14:40:18.424] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 14:40:19.229] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 14:40:19.230] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 14:40:19.253] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-[2021-08-12 14:40:19.400] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$ce55a435] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 14:40:19.709] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 14:40:19.828] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 14:40:19.835] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 14:40:19.836] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 14:40:19.836] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 14:40:19.901] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 14:40:19.901] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1477 ms
-[2021-08-12 14:40:19.905] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 14:40:19.909] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 14:40:20.065] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 14:40:20.065] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 14:40:20.110] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 14:40:20.123] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
+[2021-09-17 18:14:53.005] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStarting] [55] - Starting SpringApplicationStart using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 32 (D:\gitRepos\aresboot\aresboot-database\build\classes\java\main started by xy in D:\gitRepos\aresboot)
+[2021-09-17 18:14:53.008] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStartupProfileInfo] [663] - The following profiles are active: dev
+[2021-09-17 18:14:53.052] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-17 18:14:53.052] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-17 18:14:54.197] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
+[2021-09-17 18:14:54.205] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
+[2021-09-17 18:14:54.206] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
+[2021-09-17 18:14:54.206] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[2021-09-17 18:14:54.270] [INFO ] [restartedMain] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [log] [173] - Initializing Spring embedded WebApplicationContext
+[2021-09-17 18:14:54.271] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1218 ms
+[2021-09-17 18:14:54.522] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
+[2021-09-17 18:14:54.544] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 14:48:04.913] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 14:48:04.924] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 54164 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 14:48:04.925] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 14:48:05.014] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 14:48:05.015] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 14:48:06.197] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 14:48:06.199] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 14:48:06.224] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 12 ms. Found 0 Redis repository interfaces.
-[2021-08-12 14:48:06.382] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$beab2232] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 14:48:06.724] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 14:48:06.853] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 14:48:06.861] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 14:48:06.862] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 14:48:06.862] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 14:48:06.931] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 14:48:06.931] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1915 ms
-[2021-08-12 14:48:06.936] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 14:48:06.939] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 14:48:07.094] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 14:48:07.094] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 14:48:07.142] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 14:48:07.156] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
+[2021-09-17 18:15:20.908] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStarting] [55] - Starting SpringApplicationStart using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 17488 (D:\gitRepos\aresboot\aresboot-database\build\classes\java\main started by xy in D:\gitRepos\aresboot)
+[2021-09-17 18:15:20.911] [INFO ] [restartedMain] [com.cn.nbcb.SpringApplicationStart] [logStartupProfileInfo] [663] - The following profiles are active: dev
+[2021-09-17 18:15:20.979] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-17 18:15:20.979] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-17 18:15:23.477] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
+[2021-09-17 18:15:23.488] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
+[2021-09-17 18:15:23.489] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
+[2021-09-17 18:15:23.490] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
+[2021-09-17 18:15:23.587] [INFO ] [restartedMain] [o.a.c.core.ContainerBase.[Tomcat].[localhost].[/]] [log] [173] - Initializing Spring embedded WebApplicationContext
+[2021-09-17 18:15:23.588] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 2608 ms
+[2021-09-17 18:15:23.955] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
+[2021-09-17 18:15:23.986] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 15:42:38.611] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 15:42:38.618] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 40904 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 15:42:38.619] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 15:42:38.677] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 15:42:38.677] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 15:42:39.740] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 15:42:39.742] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 15:42:39.765] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-[2021-08-12 15:42:39.949] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$922540d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 15:42:40.337] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 15:42:40.466] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 15:42:40.473] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 15:42:40.474] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 15:42:40.474] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 15:42:40.538] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 15:42:40.538] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1860 ms
-[2021-08-12 15:42:40.544] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 15:42:40.548] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 15:42:40.713] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 15:42:40.713] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 15:42:40.759] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 15:42:40.772] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 15:45:02.364] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 15:45:02.368] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 51172 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 15:45:02.369] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 15:45:02.414] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 15:45:02.414] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 15:45:03.238] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 15:45:03.240] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 15:45:03.263] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-[2021-08-12 15:45:03.444] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$b283ee88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 15:45:03.787] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 15:45:03.906] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 15:45:03.912] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 15:45:03.913] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 15:45:03.913] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 15:45:03.977] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 15:45:03.978] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1564 ms
-[2021-08-12 15:45:03.982] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 15:45:03.985] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 15:45:04.148] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 15:45:04.148] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 15:45:04.193] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 15:45:04.206] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 16:00:26.362] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 16:00:26.367] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 33044 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 16:00:26.368] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 16:00:26.405] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 16:00:26.405] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 16:00:27.190] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 16:00:27.192] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 16:00:27.214] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-[2021-08-12 16:00:27.361] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$f9dff442] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 16:00:27.669] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 16:00:27.788] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 16:00:27.795] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:00:27.796] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 16:00:27.796] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 16:00:27.862] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 16:00:27.863] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1458 ms
-[2021-08-12 16:00:27.867] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 16:00:27.871] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 16:00:28.023] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 16:00:28.023] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 16:00:28.068] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 16:00:28.080] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 16:02:39.596] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 16:02:39.601] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 56804 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 16:02:39.601] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 16:02:39.641] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 16:02:39.642] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 16:02:40.589] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 16:02:40.591] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 16:02:40.612] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-[2021-08-12 16:02:40.763] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$3a3818cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 16:02:41.097] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 16:02:41.223] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 16:02:41.231] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:02:41.231] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 16:02:41.231] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 16:02:41.294] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 16:02:41.295] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1653 ms
-[2021-08-12 16:02:41.299] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 16:02:41.303] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 16:02:41.453] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 16:02:41.453] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 16:02:41.497] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 16:02:41.511] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 16:03:19.082] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 16:03:19.093] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 60292 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 16:03:19.094] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 16:03:19.142] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 16:03:19.142] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 16:03:20.084] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 16:03:20.086] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 16:03:20.109] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-[2021-08-12 16:03:20.256] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$75588f27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 16:03:20.571] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 16:03:20.689] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 16:03:20.696] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:03:20.697] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 16:03:20.697] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 16:03:20.759] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 16:03:20.760] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1617 ms
-[2021-08-12 16:03:20.764] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 16:03:20.767] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 16:03:20.925] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 16:03:20.926] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 16:03:20.970] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 16:03:20.983] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 16:07:24.169] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 16:07:24.174] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 56764 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 16:07:24.174] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 16:07:24.215] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 16:07:24.215] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 16:07:25.110] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 16:07:25.112] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 16:07:25.134] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
-[2021-08-12 16:07:25.278] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$b283ee88] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 16:07:25.605] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 16:07:25.724] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 16:07:25.731] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:07:25.732] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 16:07:25.732] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 16:07:25.794] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 16:07:25.795] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1579 ms
-[2021-08-12 16:07:25.799] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 16:07:25.803] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 16:07:25.957] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 16:07:25.957] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 16:07:26.000] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Stopping service [Tomcat]
-[2021-08-12 16:07:26.013] [INFO ] [restartedMain] [o.s.b.a.l.ConditionEvaluationReportLoggingListener] [logMessage] [136] - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-[2021-08-12 16:28:12.003] [INFO ] [background-preinit] [org.hibernate.validator.internal.util.Version] [<clinit>] [21] - HV000001: Hibernate Validator 6.2.0.Final
-[2021-08-12 16:28:12.007] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 59344 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 16:28:12.007] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 16:28:12.045] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[2021-08-12 16:28:12.045] [INFO ] [restartedMain] [o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor] [logTo] [255] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[2021-08-12 16:28:12.939] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 16:28:12.941] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 16:28:12.963] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
-[2021-08-12 16:28:13.114] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$6d1bae44] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 16:28:13.510] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 16:28:13.684] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 16:28:13.693] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:28:13.694] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 16:28:13.694] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 16:28:13.784] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 16:28:13.784] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 1739 ms
-[2021-08-12 16:28:13.790] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 16:28:13.796] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 16:28:14.000] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 16:28:14.000] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 16:28:15.458] [INFO ] [restartedMain] [o.s.b.d.autoconfigure.OptionalLiveReloadServer] [startServer] [58] - LiveReload server is running on port 35729
-[2021-08-12 16:28:15.464] [INFO ] [restartedMain] [o.s.b.actuate.endpoint.web.EndpointLinksResolver] [<init>] [58] - Exposing 14 endpoint(s) beneath base path '/actuator'
-[2021-08-12 16:28:15.509] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Starting ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:28:15.524] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [start] [220] - Tomcat started on port(s): 8081 (http) with context path '/dev'
-[2021-08-12 16:28:15.543] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarted] [61] - Started StartSpringBootApplication in 3.929 seconds (JVM running for 4.561)
-[2021-08-12 16:28:15.826] [INFO ] [RMI TCP Connection(2)-172.20.10.2] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2021-08-12 16:28:15.826] [INFO ] [RMI TCP Connection(2)-172.20.10.2] [org.springframework.web.servlet.DispatcherServlet] [initServletBean] [525] - Initializing Servlet 'dispatcherServlet'
-[2021-08-12 16:28:15.827] [INFO ] [RMI TCP Connection(2)-172.20.10.2] [org.springframework.web.servlet.DispatcherServlet] [initServletBean] [547] - Completed initialization in 1 ms
-[2021-08-12 16:29:57.041] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 59344 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 16:29:57.041] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 16:29:57.378] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 16:29:57.378] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 16:29:57.387] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
-[2021-08-12 16:29:57.428] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$6d1bae44] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 16:29:57.480] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 16:29:57.525] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 16:29:57.526] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:29:57.526] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 16:29:57.527] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 16:29:57.540] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 16:29:57.540] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 496 ms
-[2021-08-12 16:29:57.542] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 16:29:57.545] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 16:29:57.606] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 16:29:57.606] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 16:29:58.025] [INFO ] [restartedMain] [o.s.b.d.autoconfigure.OptionalLiveReloadServer] [startServer] [58] - LiveReload server is running on port 35729
-[2021-08-12 16:29:58.029] [INFO ] [restartedMain] [o.s.b.actuate.endpoint.web.EndpointLinksResolver] [<init>] [58] - Exposing 14 endpoint(s) beneath base path '/actuator'
-[2021-08-12 16:29:58.053] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Starting ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:29:58.054] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [start] [220] - Tomcat started on port(s): 8081 (http) with context path '/dev'
-[2021-08-12 16:29:58.061] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarted] [61] - Started StartSpringBootApplication in 1.059 seconds (JVM running for 107.08)
-[2021-08-12 16:29:58.064] [INFO ] [restartedMain] [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] [onApplicationEvent] [63] - Condition evaluation unchanged
-[2021-08-12 16:29:59.710] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarting] [55] - Starting StartSpringBootApplication using Java 1.8.0_241 on LAPTOP-996T2OKC with PID 59344 (D:\gitRepos\aresboot\aresboot-web\build\classes\java\main started by xy in D:\gitRepos\aresboot)
-[2021-08-12 16:29:59.710] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStartupProfileInfo] [663] - The following profiles are active: dev
-[2021-08-12 16:29:59.961] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [multipleStoresDetected] [262] - Multiple Spring Data modules found, entering strict repository configuration mode!
-[2021-08-12 16:29:59.961] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [132] - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-[2021-08-12 16:29:59.967] [INFO ] [restartedMain] [o.s.d.r.config.RepositoryConfigurationDelegate] [registerRepositoriesIn] [201] - Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
-[2021-08-12 16:29:59.995] [INFO ] [restartedMain] [o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker] [postProcessAfterInitialization] [376] - Bean 'asyncConfig' of type [com.cn.config.AsyncConfig$$EnhancerBySpringCGLIB$$6d1bae44] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-[2021-08-12 16:30:00.040] [INFO ] [restartedMain] [com.cn.config.ErrorConfig] [registerErrorPages] [15] - 错误捕获注册===========================================================================
-[2021-08-12 16:30:00.055] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [initialize] [108] - Tomcat initialized with port(s): 8081 (http)
-[2021-08-12 16:30:00.055] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Initializing ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:30:00.055] [INFO ] [restartedMain] [org.apache.catalina.core.StandardService] [log] [173] - Starting service [Tomcat]
-[2021-08-12 16:30:00.055] [INFO ] [restartedMain] [org.apache.catalina.core.StandardEngine] [log] [173] - Starting Servlet engine: [Apache Tomcat/9.0.46]
-[2021-08-12 16:30:00.067] [INFO ] [restartedMain] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring embedded WebApplicationContext
-[2021-08-12 16:30:00.067] [INFO ] [restartedMain] [o.s.b.w.s.c.ServletWebServerApplicationContext] [prepareWebApplicationContext] [290] - Root WebApplicationContext: initialization completed in 354 ms
-[2021-08-12 16:30:00.069] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageFilter] [31] - =============================3
-[2021-08-12 16:30:00.071] [INFO ] [restartedMain] [com.cn.config.FilterConfig] [getMessageBean] [25] - =============================2
-[2021-08-12 16:30:00.123] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [14] - /dev
-[2021-08-12 16:30:00.123] [INFO ] [restartedMain] [com.cn.listener.WebServletListener] [contextInitialized] [15] - application
-[2021-08-12 16:30:00.480] [INFO ] [restartedMain] [o.s.b.d.autoconfigure.OptionalLiveReloadServer] [startServer] [58] - LiveReload server is running on port 35729
-[2021-08-12 16:30:00.483] [INFO ] [restartedMain] [o.s.b.actuate.endpoint.web.EndpointLinksResolver] [<init>] [58] - Exposing 14 endpoint(s) beneath base path '/actuator'
-[2021-08-12 16:30:00.503] [INFO ] [restartedMain] [org.apache.coyote.http11.Http11NioProtocol] [log] [173] - Starting ProtocolHandler ["http-nio-8081"]
-[2021-08-12 16:30:00.505] [INFO ] [restartedMain] [o.s.boot.web.embedded.tomcat.TomcatWebServer] [start] [220] - Tomcat started on port(s): 8081 (http) with context path '/dev'
-[2021-08-12 16:30:00.511] [INFO ] [restartedMain] [com.cn.StartSpringBootApplication] [logStarted] [61] - Started StartSpringBootApplication in 0.835 seconds (JVM running for 109.529)
-[2021-08-12 16:30:00.512] [INFO ] [restartedMain] [o.s.b.d.a.ConditionEvaluationDeltaLoggingListener] [onApplicationEvent] [63] - Condition evaluation unchanged
-[2021-08-12 16:34:28.384] [INFO ] [http-nio-8081-exec-5] [o.a.c.c.ContainerBase.[Tomcat].[localhost].[/dev]] [log] [173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[2021-08-12 16:34:28.385] [INFO ] [http-nio-8081-exec-5] [org.springframework.web.servlet.DispatcherServlet] [initServletBean] [525] - Initializing Servlet 'dispatcherServlet'
-[2021-08-12 16:34:28.386] [INFO ] [http-nio-8081-exec-5] [org.springframework.web.servlet.DispatcherServlet] [initServletBean] [547] - Completed initialization in 1 ms
-[2021-08-12 16:34:39.641] [INFO ] [http-nio-8081-exec-8] [com.cn.interceptor.DefaultHandlerInterceptor] [preHandle] [17] - ===com.cn.action.DeptAction@6ba46a84
-[2021-08-12 16:34:39.641] [INFO ] [http-nio-8081-exec-8] [com.cn.interceptor.DefaultHandlerInterceptor] [preHandle] [18] - ===class com.cn.action.DeptAction
-[2021-08-12 16:34:39.642] [INFO ] [http-nio-8081-exec-8] [com.cn.interceptor.DefaultHandlerInterceptor] [preHandle] [19] - ===public java.lang.Object com.cn.action.DeptAction.getBooks()
-[2021-08-12 16:34:39.642] [INFO ] [http-nio-8081-exec-8] [com.cn.interceptor.MDCInterceptor] [preHandle] [26] - MDC操作记录开始：requestId = fd792b6f-aba
-[2021-08-12 16:34:39.642] [INFO ] [http-nio-8081-exec-8] [com.cn.interceptor.MDCInterceptor] [preHandle] [27] - forward = null,clientIp=0:0:0:0:0:0:0:1,requestId=fd792b6f-aba
-[2021-08-12 16:34:39.649] [INFO ] [http-nio-8081-exec-8] [com.cn.action.DeptAction] [getBooks] [52] - this.detp:Detp(deptno=12, dname=我的2, dloc=我的1)
-[2021-08-12 16:34:39.650] [INFO ] [http-nio-8081-exec-8] [com.cn.action.DeptAction] [getBooks] [53] - this.books:[boot1, boot2, boot3, boot4, boot5]
-[2021-08-12 16:34:39.652] [INFO ] [http-nio-8081-exec-8] [com.cn.interceptor.MDCInterceptor] [postHandle] [35] - MDC操作记录结束，request=fd792b6f-aba

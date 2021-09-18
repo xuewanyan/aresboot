@@ -85,6 +85,6 @@ public class CallableAction {
     @PostMapping("yibu")
     public void echo3(){
         this.objListenerConfig.addListener(new CustInfo());
-        log.info("正常返回=======================soft");
+        log.info("正常返回=======================mi223xed");
     }
 }

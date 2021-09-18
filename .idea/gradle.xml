@@ -14,7 +14,10 @@
             <option value="$PROJECT_DIR$/aresboos-rsocket-base" />
             <option value="$PROJECT_DIR$/aresboot-autoConfig-starter" />
             <option value="$PROJECT_DIR$/aresboot-common" />
+            <option value="$PROJECT_DIR$/aresboot-database" />
+            <option value="$PROJECT_DIR$/aresboot-oauth2" />
             <option value="$PROJECT_DIR$/aresboot-rsocket-base" />
+            <option value="$PROJECT_DIR$/aresboot-spring-security" />
             <option value="$PROJECT_DIR$/aresboot-web" />
             <option value="$PROJECT_DIR$/aresboot-webservice-client" />
             <option value="$PROJECT_DIR$/aresboot-webservice-common" />

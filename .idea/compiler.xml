@@ -10,12 +10,15 @@
         </processorPath>
         <module name="aresboot.aresboot-rsocket-base.main" />
         <module name="aresboot.aresboot-webservice-common.main" />
+        <module name="aresboot.aresboot-oauth2.main" />
         <module name="aresboot.aresboot-webservice-client.main" />
         <module name="aresboot.aresboot-common.main" />
         <module name="aresboot.untitled.main" />
         <module name="aresboot.aresboot-web.main" />
         <module name="aresboot.aresboot-webservice-server.main" />
         <module name="aresboot.aresboos-rsocket-base.main" />
+        <module name="aresboot.aresboot-spring-security.main" />
+        <module name="aresboot.aresboot-database.main" />
       </profile>
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />

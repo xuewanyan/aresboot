@@ -91,6 +91,7 @@
     需要清楚的是，在整个的SpringBoot项目开发过程之中，过滤器是属于javaWeb的原生的开发组件，那么既然是原生的处理组件，
     是否使用还是需要根据大家的实际要求来进行处理。
     MessageFilter extends HttpFilter 
+    @WebWebFilter 注解使用，但是记得配置扫描bean，spring
 #P44 整合WEB监听器
     WebServletListener implements ServletContextListener
 #P45 拦截器
@@ -199,6 +200,7 @@
     入即可（本质上可以理解为一个独立的应用进程）。登录Prometheus.io
     上传：node_exporter-1.1.2.linux-amd64.tar.gz到Linu系统之中
     解压文件：tar xzvf /var/ftp/node_exporter-1.1.2.linux-amd64.tar.gz -C /usr/local/
+    解压文件：tar -xvf /var/ftp/node_exporter-1.1.2.linux-amd64.tar -C /usr/local/
     目录更名：mv /usr/local/node_exporter-1.1.2.linux-amd64/ /usr/local/node_exporter
     修改配置文件：vim /lib/systemd/system/node_exporter.service
         [Unit]
@@ -410,5 +412,73 @@
                 4、获取所有的类加载器（包括通过AutoConfiguration + Starter配置的类加载器）。
                 5、初始化所有的Bean对象b并且自动进行Bean注册。
                 6、设置所有的监听操作，包括时间监听等。
-                
-                 
+#P123 SpringBootApplication的run方法                
+#P124 启动内置WEB容器
+#P125 AbstractApplicationContext.refresh()方法    
+#P126 springbootCLI配置
+    CLI:命令行接口 
+    如果要想知道CLI的作用
+#P127 使用Groovy开发springboot应用
+#P128 springbootCLI工具管理  
+    1、使用CLI创建maven项目 
+        spring init --dependencies=web,thymeleaf yooyt-boot
+    2、使用CLI创建gradle项目
+        spring init --build=gradle --java-version=1.8 --dependencies=web,thymeleaf --packaging=war muyan-boot
+#P129 Druid基本配置
+    推荐阿里的Druid数据库连接池来进行数据库连接。
+    1、创建aresboot-database模块
+    2、为模块添加依赖配置
+#P130 基于Bean配置Druid   
+#P131 Druid监控界面  （得露的）
+#P133 SQL监控      
+#P134 SQL防火墙   
+#P135 Spring监控     
+#P136 Druid日志记录   
+#P137 整合mybatis
+#P138 整合mybatisPlus           
+#P139 基于Bean模式整合Mybatisplus组件     
+#P140 AOP事物处理
+    在springboot里面可以直接导入spring配置文件，      
+#P141 多数据源操作简介    
+#P142 动态数据应决策
+    需要用到路由接口：AbstractRoutingDataSource
+    DruidMultDataSource        
+#P145 JTA分布式事物简介    
+    一个项目中创建的若干个数据源一起实现的事物控制；
+    为了便于事物处理的规范化配置，在JavaEE中提供了JTA(Java Transaction API、事物处理API)，服务支持，
+    该服务允许程序执行分布式事物处理，可以在多个网络资源上访问并更新数据，这样极大增强了JDBC程序的处理能力，
+    由于JTA仅仅是一个技术标准，所以在进行分布式事物处理时就需要引入Atomikos开源组件来实现具体的事物管理操作。
+#P146 AutomikosDataSource   
+    替换数据源：com.alibaba.druid.pool.DruidDataSource 替换为：com.alibaba.druid.pool.DruidDataSource
+#P147 多数据源事物管理 
+#P148 Mybatis整合分布式事物
+     事物的概念：要么同生，要么同死。                             
+#P149 SpringSecurity快速整合
+    该框架是行业内最早的一款用于实现授权与认证检测的开发框架，那么随后在此框架之后又有了Shiro开发框架，但是
+    这些开发框架在原始设计的时候并没有考虑到当今前后端分离的结构。
+#P150 基于Bean配置SpringSecurity
+#P151 HttpSecurity
+#P152 返回Rest认证信息
+#P153 UserDetailsService         
+#P154 基于数据库实现认证授权操作 
+#P155 OAuth2基本概念
+    如果要想理解OAuth2，那么首先就应该清楚SSO的概念（单点登录技术），在一个大规模的集群环境之中，可以构建一个统一
+    的认证服务器，而这个认证服务器可以为集群之中的所有服务节点提供认证处理
+    单点登录的核心概念在于认证操作。
+#P156 搭建OAuth2基础服务  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+     

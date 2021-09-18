@@ -9,7 +9,14 @@ ext.vertions = [ // 定义所有要使用的版本号
     prometheus                                   : '1.7.2',
     shedlock                                     : '4.25.0',
     redis                                        : '2.5.3',
-    commonspool                                  : '2.10.0'
+    commonspool                                  : '2.10.0',
+    druid                                        : '1.2.5',
+    ojdbc6                                       : '11.2.0.3',
+    springJdbc                                   : '2.5.4',
+    mybatis                                      : '3.5.7',
+    mybatisBootStarter                           : '2.2.0',
+    mybatilplus                                  : '3.4.3.2',
+    oauth2                                       : '2.5.2'
 ]
 ext.libraries=[
         'spring-boot-gradle-plugin'              : "org.springframework.boot:spring-boot-gradle-plugin:${vertions.springBoot}",
@@ -27,6 +34,15 @@ ext.libraries=[
         'shedlock-spring'                        : "net.javacrumbs.shedlock:shedlock-spring:${vertions.shedlock}",
         'shedlock-provider-redis-spring'         : "net.javacrumbs.shedlock:shedlock-provider-redis-spring:${vertions.shedlock}",
         'spring-boot-starter-data-redis'         : "org.springframework.boot:spring-boot-starter-data-redis:${vertions.redis}",
-        'commons-pool2'                          : "org.apache.commons:commons-pool2:${vertions.commonspool}"
+        'commons-pool2'                          : "org.apache.commons:commons-pool2:${vertions.commonspool}",
+        'druid-starter'                          : "com.alibaba:druid-spring-boot-starter:${vertions.druid}",
+        'druid'                                  : "com.alibaba:druid:${vertions.druid}",
+        'ojdbc6'                                 : "com.oracle:ojdbc6:${vertions.ojdbc6}",
+        'spring-jdbc'                            : "org.springframework.boot:spring-boot-starter-jdbc:${vertions.springJdbc}" ,
+        'mybatis'                                : "org.mybatis:mybatis:${vertions.mybatis}",
+        'mybatis-spring-boot-starter'            : "org.mybatis.spring.boot:mybatis-spring-boot-starter:${vertions.mybatisBootStarter}",
+        'mybatis-plus-boot-starter'              : "com.baomidou:mybatis-plus-boot-starter:${vertions.mybatilplus}",
+        'mybatis-plus'                           : "com.baomidou:mybatis-plus:${vertions.mybatilplus}",
+        'org.springframework.security.oauth.boot': "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:${vertions.oauth2}"
 ]
 

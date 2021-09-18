@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.springframework.stereotype.Component;
 import java.beans.IntrospectionException;
 import java.beans.PropertyDescriptor;
@@ -22,6 +23,7 @@ import java.lang.reflect.Parameter;
 public class ServiceAscept {
 
     @After("execution(* com.cn..service..*.*(..))")
+    // @Before("execution(* com.cn..service..*.*(..))")
     public Object aroundInvoke(JoinPoint joinPoint) throws Throwable {
 
         Object[] args = joinPoint.getArgs();

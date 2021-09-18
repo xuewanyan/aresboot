@@ -22,6 +22,7 @@ public class FilterConfig {
         filterRegistrationBean.setFilter(this.getMessageFilter());
         filterRegistrationBean.setName("Mesgas");
         filterRegistrationBean.addUrlPatterns("/message/*");
+        filterRegistrationBean.setOrder(5); // 可以设置过滤器的执行顺序
         log.info("=============================2");
         return filterRegistrationBean;
     }

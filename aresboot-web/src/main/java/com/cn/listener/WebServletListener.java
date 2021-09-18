@@ -6,6 +6,9 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 
+/**
+ * 监听器
+ */
 @Slf4j
 @WebListener
 public class WebServletListener implements ServletContextListener {

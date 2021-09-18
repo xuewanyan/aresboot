@@ -155,3 +155,36 @@ project('aresboot-autoConfig-starter'){ // 子模块
     }
 }
 
+project('aresboot-database'){ // 子模块
+    dependencies {
+        implementation libraries.'spring-jdbc' // 连接池
+        implementation (project(':aresboot-common')) // 引入其他子模块
+        implementation 'org.springframework.boot:spring-boot-starter-actuator' // 监控
+        implementation libraries.'druid-starter' // druid连接池自动装配
+        // implementation libraries.'druid' // druid连接池手动配置
+        // implementation libraries.'ojdbc6' // oracle连接驱动
+        // implementation libraries.'mybatis' // mybatis
+        // implementation libraries.'mybatis-spring-boot-starter' // mybatis依赖库
+        implementation libraries.'mybatis-plus' // mybatis-plus
+        implementation libraries.'mybatis-plus-boot-starter' // mybatisplus依赖库
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-aop'
+        implementation 'org.springframework.boot:spring-boot-starter-jta-atomikos'
+        implementation 'mysql:mysql-connector-java'
+    }
+}
+project('aresboot-spring-security'){ // 子模块
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-security' // 连接池
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation (project(':aresboot-common')) // 引入其他子模块
+    }
+}
+project('aresboot-oauth2'){ // 子模块
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-security'
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation (project(':aresboot-common')) // 引入其他子模块
+        implementation libraries.'org.springframework.security.oauth.boot' // oauth
+    }
+}

@@ -11,8 +11,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @ImportResource(locations = {"classpath:META-INF/spring/spring-service.xml"})
 @SpringBootApplication
-@ServletComponentScan
-@EnableScheduling
 public class StartSpringBootApplication extends SpringBootServletInitializer {
     public static void main(String[] args) {
         SpringApplication.run(StartSpringBootApplication.class,args);

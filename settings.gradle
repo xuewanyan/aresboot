@@ -8,4 +8,7 @@ include 'aresboot-webservice-client'
 include 'aresboot-rsocket-base'
 include 'aresboos-rsocket-base'
 include 'aresboot-autoConfig-starter'
+include 'aresboot-database'
+include 'aresboot-spring-security'
+include 'aresboot-oauth2'
 

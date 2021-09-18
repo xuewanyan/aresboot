@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    mmp:
+      type: com.alibaba.druid.pool.xa.DruidXADataSource
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://192.168.59.128:3306
+      username: mmp
+      password: 111111
+    druid:
+      initial-size: 1 #初始化连接池大小
+      min-idle: 10 #最小维持的连接池大小
+      max-active: 50 #最大可提供的连接数量
+      max-wait: 60000 #最大的等待时间
+      time-between-eviction-runs-millis: 6000 #关闭空闲连接间隔（millis）
+      min-evictable-idle-time-millis: 30000 #连接最小的生存时间
+      validation-query: SELECT 1 FROM DUAL #数据库的状态检测
+      test-while-idle: true #判断连接是否可用
+      test-on-borrow: false #在获得连接之前是否要进行测试
+      test-on-return: false #归还连接前是否要进行测试
+      pool-prepared-statements: false #不缓存PSTMT
+      max-pool-prepared-statement-per-connection-size: 20 #配置PSTMT缓存个数
+      filter:
+        stat:
+          log-slow-sql: true #记录慢sql
+          merge-sql: true #统计相同的sql命令
+          slow-sql-millis: 2000 #慢sql执行标准
+  profiles:
+    active: dev
+server:
+  port: 8080
+mybatis-plus:
+  config-location: classpath:META-INF/mybatis/mybatis.cfg.xml #mybatis配置文件所在路径
+  type-aliases-package: com.cn.nbcb.vo #定义所有操作类的别名所在包
+  mapper-locations: classpath:META-INF/mybatis/mapper/**/*.xml #所有的mapper映射文件
+  global-config: # 全局配置
+    db-config:
+      logic-delete-value: 1 # 数据删除后
+      logic-not-delete-value: 0 # 数据删除前
+
