@@ -3,7 +3,7 @@ ext.vertions = [ // 定义所有要使用的版本号
     junit                                        : '5.7.2',
     junitplatformlauncher                        : '1.7.2',
     lombok                                       : '1.18.20',
-    fastjson                                     : '1.2.75',
+    fastjson                                     : '1.2.78',
     jackson                                      : '2.12.3',
     hibernate                                    : '6.2.0.Final',
     prometheus                                   : '1.7.2',
@@ -16,7 +16,9 @@ ext.vertions = [ // 定义所有要使用的版本号
     mybatis                                      : '3.5.7',
     mybatisBootStarter                           : '2.2.0',
     mybatilplus                                  : '3.4.3.2',
-    oauth2                                       : '2.5.2'
+    oauth2                                       : '2.5.2',
+    jjwt                                         : '0.9.1',
+    jaxb                                         : '2.3.1'
 ]
 ext.libraries=[
         'spring-boot-gradle-plugin'              : "org.springframework.boot:spring-boot-gradle-plugin:${vertions.springBoot}",
@@ -43,6 +45,9 @@ ext.libraries=[
         'mybatis-spring-boot-starter'            : "org.mybatis.spring.boot:mybatis-spring-boot-starter:${vertions.mybatisBootStarter}",
         'mybatis-plus-boot-starter'              : "com.baomidou:mybatis-plus-boot-starter:${vertions.mybatilplus}",
         'mybatis-plus'                           : "com.baomidou:mybatis-plus:${vertions.mybatilplus}",
-        'org.springframework.security.oauth.boot': "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:${vertions.oauth2}"
+        'org.springframework.security.oauth.boot': "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:${vertions.oauth2}",
+        'jjwt'                                   : "io.jsonwebtoken:jjwt:${vertions.jjwt}",
+        'jaxb-api'                               : "javax.xml.bind:jaxb-api:${vertions.jaxb}",
+        'fastjson'                               : "com.alibaba:fastjson:${vertions.fastjson}"
 ]
 

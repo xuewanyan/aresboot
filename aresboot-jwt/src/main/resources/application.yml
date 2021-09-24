@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: aresboot-jwt
+nbcb:
+  config:
+    jwt:
+      sign: nbcb #证书签名
+      issure: xy #证书签发人
+      secret: www.nbcb.com #加密密钥
+      expire: 10000 # 有效时间 秒
+server:
+  port: 8080

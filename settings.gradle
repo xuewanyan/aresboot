@@ -11,4 +11,5 @@ include 'aresboot-autoConfig-starter'
 include 'aresboot-database'
 include 'aresboot-spring-security'
 include 'aresboot-oauth2'
+include 'aresboot-jwt'
 

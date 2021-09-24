@@ -2,6 +2,7 @@ package com.cn.nbcb.config;
 
 import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.support.http.StatViewServlet;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

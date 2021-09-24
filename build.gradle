@@ -188,3 +188,11 @@ project('aresboot-oauth2'){ // 子模块
         implementation libraries.'org.springframework.security.oauth.boot' // oauth
     }
 }
+project('aresboot-jwt'){ // 子模块
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation libraries.'jjwt' // jjwt
+        implementation libraries.'jaxb-api' // jaxb-api
+        implementation libraries.'fastjson' // fastjson
+    }
+}

@@ -13,6 +13,7 @@
         <module name="aresboot.aresboot-oauth2.main" />
         <module name="aresboot.aresboot-webservice-client.main" />
         <module name="aresboot.aresboot-common.main" />
+        <module name="aresboot.aresboot-jwt.main" />
         <module name="aresboot.untitled.main" />
         <module name="aresboot.aresboot-web.main" />
         <module name="aresboot.aresboot-webservice-server.main" />
